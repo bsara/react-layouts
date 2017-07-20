@@ -1,0 +1,58 @@
+{
+  "name": "@bsara/react-layouts",
+  "version": "1.0.0-alpha.0",
+  "description": "A collection of generic, reusable layout components",
+  "authors": [
+    "Brandon Sara (http://bsara.pro/)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bsara/react-layouts#readme",
+  "repository": "bsara/react-layouts",
+  "bugs": {
+    "url": "https://github.com/bsara/react-layouts/issues"
+  },
+  "keywords": [
+    "react",
+    "react-layouts",
+    "component",
+    "container",
+    "layouts",
+    "layout"
+  ],
+  "files": [
+    "*Layout.js",
+    "src/**/*.js",
+    "src/**/*.css",
+    "!src/**/story.*"
+  ],
+  "scripts": {
+    "sb": "npm run storybook",
+    "storybook": "npx start-storybook -p 9900 -c .storybook",
+    "l": "npm run lint",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "lint:scripts": "npx eslint .",
+    "lint:styles": "npx stylelint **/*.css",
+    "bump": "npm --no-git-tag-version version prerelease",
+    "bump:major": "npm --no-git-tag-version version major",
+    "bump:minor": "npm --no-git-tag-version version minor",
+    "bump:patch": "npm --no-git-tag-version version patch",
+    "postversion": "scripts/post-version.js",
+    "prepublishOnly": "scripts/tag-version.js",
+    "postpublish": "npm run bump"
+  },
+  "dependencies": {
+    "@bsara/eslint-config": "^2.1.1",
+    "classnames": "^2.2.5",
+    "prop-types": ">= 15.5.10",
+    "react": ">= 15.6.1"
+  },
+  "devDependencies": {
+    "@bsara/eslint-config-react": "^1.0.1",
+    "@bsara/stylelint-config": "^1.0.0",
+    "@storybook/react": "^3.1.9",
+    "eslint": "^4.2.0",
+    "react-dom": "^15.6.1",
+    "shelljs": "^0.7.8",
+    "stylelint": "~8.0.0"
+  }
+}

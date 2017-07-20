@@ -1,0 +1,44 @@
+._tall {
+  min-height: fill-available;
+}
+
+
+
+._separator {
+  --item-separator: 1px solid red;
+}
+
+
+
+._align-items-start {
+  --item-alignment: start;
+}
+
+._align-items-end {
+  --item-alignment: end;
+}
+
+._align-items-center {
+  --item-alignment: center;
+}
+
+
+
+._stretch-items {
+  --stretch-items: 1;
+}
+
+
+
+
+._item-size {
+  --item-size: 30px;
+}
+
+._item-min-size {
+  --item-min-size: 100px;
+}
+
+._item-max-size {
+  --item-max-size: 10px;
+}

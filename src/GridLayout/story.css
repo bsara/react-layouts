@@ -1,0 +1,33 @@
+._gap {
+  --item-gap: 10px;
+}
+
+
+
+._column-count {
+  --column-count: 4;
+}
+
+._row-count {
+  --row-count: 4;
+}
+
+
+
+._areas-template {
+  /* TODO */
+}
+
+._columns-template {
+  --columns-template: minmax(max-content, 50fr) minmax(min-content, 75fr) minmax(min-content, 35fr) minmax(min-content, 10fr);
+}
+
+._rows-template {
+  --rows-template: repeat(4, 50px);
+}
+
+
+
+._item-size {
+  --item-size: 100px;
+}
