@@ -29,12 +29,17 @@ const pkg  = require('../package.json');
 
 
 const versionName = `v${pkg.version}`;
+const filePaths   = pkg.files.filter((filePath) => (filePath.startsWith("!") === false));
 
 
 // Update all files containing project's version in comments
 // -------------------------------------------------------------
 
-pkg.files.forEach(function(filePath) {
+filePaths.forEach(function(filePath) {
+  if (filePath.startsWith('!')) {
+    return;
+  }
+
   sed('-i', RegExp(`\\*\\s+${pkg.name}\\s+\\d+\\.\\d+\\.\\d+(-\\w+){0,1}(\\.\\d+){0,1}`), `* ${pkg.name} ${versionName}`, path.join(__dirname, '..', filePath));
 });
 
@@ -49,7 +54,7 @@ if (!which('git')) {
 
 cd(path.join(__dirname, '..'));
 
-_execCmd(`git add package.json package-lock.json ${pkg.files.join(" ")}`, "add (`git add`) changed version bump files");
+_execCmd(`git add package.json package-lock.json ${filePaths.join(" ")}`, "add (`git add`) changed version bump files");
 _execCmd(`git commit -m "version bump (${versionName})"`, "commit version bump changes");
 _execCmd('git push', "push git version bump commit to default git remote");
 
