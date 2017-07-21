@@ -41,14 +41,13 @@
     "postpublish": "npm run bump"
   },
   "dependencies": {
-    "@bsara/eslint-config": "^2.1.1",
     "classnames": "^2.2.5",
     "prop-types": ">= 15.5.10",
     "react": ">= 15.6.1"
   },
   "devDependencies": {
     "@bsara/eslint-config-react": "^1.0.5",
-    "@bsara/stylelint-config": "^1.0.0",
+    "@bsara/stylelint-config": "^1.0.1",
     "@storybook/react": "^3.1.9",
     "eslint": "^4.3.0",
     "react-dom": "^15.6.1",

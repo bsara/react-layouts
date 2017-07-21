@@ -48,7 +48,7 @@
   flex-direction: column;
 }
 
-.linear-layout.vertical > * {
+.linear-layout.vertical > * { /* stylelint-disable-line no-descending-specificity */
   height:     var(--item-size);
   min-height: var(--item-min-size);
   max-height: var(--item-max-size);
