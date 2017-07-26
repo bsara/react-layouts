@@ -10,7 +10,3 @@ env:
   browser: true
   es6:     true
   node:    true
-
-
-rules:
-  array-element-newline: 'off' # Disabled until bugs are fixed
