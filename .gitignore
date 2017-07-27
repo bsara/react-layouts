@@ -24,6 +24,7 @@
 .stylelintrc.js
 
 # misc
+/bsara-react-layouts-*.tgz
 /connect.lock
 /coverage/*
 /report_*
