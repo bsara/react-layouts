@@ -19,9 +19,7 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var GridDiv = _styledComponents2.default.div.withConfig({
-  displayName: 'GridLayout__GridDiv'
-})(['--_column-count-template:repeat( var(--column-count,0),minmax( var(--item-min-width,var(--item-min-size,0)),var(--item-width,var(--item-size,var(--item-max-width,var(--item-max-size,1fr)))) ) );--_row-count-template:repeat( var(--row-count,0),minmax( var(--item-min-height,var(--item-min-size,0)),var(--item-height,var(--item-size,var(--item-max-height,var(--item-max-size,1fr)))) ) );display:grid;grid-template-areas:var(--areas-template);grid-template-columns:var(--columns-template,var(--_column-count-template));grid-template-rows:var(--rows-template,var(--_row-count-template));grid-gap:var(--item-gap);']);
+var GridDiv = _styledComponents2.default.div(['--_column-count-template:repeat( var(--column-count,0),minmax( var(--item-min-width,var(--item-min-size,0)),var(--item-width,var(--item-size,var(--item-max-width,var(--item-max-size,1fr)))) ) );--_row-count-template:repeat( var(--row-count,0),minmax( var(--item-min-height,var(--item-min-size,0)),var(--item-height,var(--item-size,var(--item-max-height,var(--item-max-size,1fr)))) ) );display:grid;grid-template-areas:var(--areas-template);grid-template-columns:var(--columns-template,var(--_column-count-template));grid-template-rows:var(--rows-template,var(--_row-count-template));grid-gap:var(--item-gap);']);
 /**
  * ISC License (ISC)
  *

@@ -7,6 +7,12 @@
   ],
 
   "plugins": [
-    [ "styled-components", { "preprocessor": true } ]
+    [
+      "styled-components",
+      {
+        "displayName":  false,
+        "preprocessor": true
+      }
+    ]
   ]
 }
