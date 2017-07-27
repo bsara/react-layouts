@@ -1,0 +1,16 @@
+{
+  "ignore": [
+    "**/story.*"
+  ],
+
+  "presets": [
+    "es2015",
+    "es2016",
+    "es2017",
+    "react"
+  ],
+
+  "plugins": [
+    [ "styled-components", { "preprocessor": true } ]
+  ]
+}

@@ -1,3 +1,4 @@
+
 /**
  * ISC License (ISC)
  *
@@ -19,16 +20,39 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
 
-import classnames from 'classnames';
+import styled from 'styled-components';
 
-import './GridLayout.css';
+
+const GridDiv = styled.div`
+  --_column-count-template: repeat(
+    var(--column-count, 0),
+    minmax(
+      var(--item-min-width, var(--item-min-size, 0)),
+      var(--item-width, var(--item-size, var(--item-max-width, var(--item-max-size, 1fr))))
+    )
+  );
+
+  --_row-count-template: repeat(
+    var(--row-count, 0),
+    minmax(
+      var(--item-min-height, var(--item-min-size, 0)),
+      var(--item-height, var(--item-size, var(--item-max-height, var(--item-max-size, 1fr))))
+    )
+  );
+
+  display:               grid;
+  grid-template-areas:   var(--areas-template);
+  grid-template-columns: var(--columns-template, var(--_column-count-template));
+  grid-template-rows:    var(--rows-template, var(--_row-count-template));
+  grid-gap:              var(--item-gap);
+`;
 
 
 export default function GridLayout({ id, children, className, style }) {
   return (
-    <section id={id} className={classnames('grid-layout', className)} style={style}>
+    <GridDiv id={id} className={className} style={style}>
       {children}
-    </section>
+    </GridDiv>
   );
 }
 

@@ -1,3 +1,4 @@
+
 /**
  * ISC License (ISC)
  *
@@ -20,17 +21,64 @@ import React     from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
+import randomatic from 'randomatic';
+import styled     from 'styled-components';
 
-import './LinearLayout.css';
+
+
+const horizontalClassName = randomatic('aA', 6);
+const verticalClassName   = randomatic('aA', 6);
+
+
+const LinearLayoutDiv = styled.div`
+  display:         flex;
+  flex-wrap:       nowrap;
+  justify-content: var(--item-alignment, flex-start);
+
+
+  > * {
+    flex-grow: var(--stretch-items, 0);
+  }
+
+
+  &.${horizontalClassName} {
+    flex-direction: row;
+
+    > * {
+      width:     var(--item-size);
+      min-width: var(--item-min-size);
+      max-width: var(--item-max-size);
+
+      &:not(:last-child) {
+        border-right: var(--item-separator, none);
+      }
+    }
+  }
+
+
+  &.${verticalClassName} {
+    flex-direction: column;
+
+    > * {
+      height:     var(--item-size);
+      min-height: var(--item-min-size);
+      max-height: var(--item-max-size);
+
+      &:not(:last-child) {
+        border-bottom: var(--item-separator, none);
+      }
+    }
+  }
+`;
 
 
 export default function LinearLayout({ id, children, className, style, direction }) {
-  direction = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? 'vertical' : 'horizontal');
+  const directionClassName = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? verticalClassName : horizontalClassName);
 
   return (
-    <section id={id} className={classnames('linear-layout', direction, className)} style={style}>
+    <LinearLayoutDiv id={id} className={classnames(directionClassName, className)} style={style}>
       {children}
-    </section>
+    </LinearLayoutDiv>
   );
 }
 

@@ -1,3 +1,4 @@
-import GridLayout from './src/GridLayout';
+import GridLayout from './dist/GridLayout';
+
 
 export default GridLayout;

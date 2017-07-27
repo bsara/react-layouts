@@ -5,6 +5,7 @@
 # compiled output
 /.temp
 /.tmp
+/build
 
 # dependencies
 /node_modules

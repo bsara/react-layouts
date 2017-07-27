@@ -1,3 +1,4 @@
-import LinearLayout from './src/LinearLayout';
+import LinearLayout from './dist/LinearLayout';
+
 
 export default LinearLayout;
