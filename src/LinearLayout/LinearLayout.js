@@ -26,8 +26,9 @@ import styled     from 'styled-components';
 
 
 
-const horizontalClassName = randomatic('aA', 6);
-const verticalClassName   = randomatic('aA', 6);
+const classNameUniquePart = randomatic('aA', 6);
+const horizontalClassName = `horizontal-${classNameUniquePart}`;
+const verticalClassName   = `vertical-${classNameUniquePart}`;
 
 
 const LinearLayoutDiv = styled.div`
