@@ -1,6 +1,6 @@
 {
   "name": "@bsara/react-layouts",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "A collection of generic, reusable layout components",
   "authors": [
     "Brandon Sara (http://bsara.pro/)"
@@ -38,7 +38,7 @@
     "bump:minor": "npm --no-git-tag-version version minor",
     "bump:patch": "npm --no-git-tag-version version patch",
     "postversion": "scripts/post-version.js",
-    "prepublishOnly": "npm run dist && git commit -am 'pre-publish changes' && git push && scripts/tag-version.js",
+    "prepublishOnly": "git push && scripts/tag-version.js",
     "postpublish": "npm run bump"
   },
   "dependencies": {
