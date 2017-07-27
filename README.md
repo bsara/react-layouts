@@ -1,4 +1,4 @@
-# react-layouts [![NPM Package](https://img.shields.io/npm/v/react-layouts.svg?style=flat-square)][npm]
+# react-layouts [![NPM Package](https://img.shields.io/npm/v/@bsara/react-layouts.svg?style=flat-square)][npm]
 
 [![ISC License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)][license]
 
@@ -15,7 +15,7 @@
 
 **Project Install**
 ```bash
-$ npm install --save react-layouts
+$ npm install --save @bsara/react-layouts
 ```
 
 
@@ -55,4 +55,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
 [bsara-home]: http://bsara.pro/
 [license]:    https://github.com/bsara/react-layouts/blob/master/LICENSE "License"
-[npm]:        https://www.npmjs.com/package/react-layouts                "NPM Package: react-layouts"
+[npm]:        https://www.npmjs.com/package/@bsara/react-layouts         "NPM Package: react-layouts"
