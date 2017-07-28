@@ -45,15 +45,23 @@ const GridDiv = styled.div`
   grid-template-columns: var(--columns-template, var(--_column-count-template));
   grid-template-rows:    var(--rows-template, var(--_row-count-template));
   grid-gap:              var(--item-gap);
+
+
+  > * {
+    grid-row:    --row-span;
+    grid-column: --col-span;
+  }
 `;
 
 
-export default function GridLayout({ id, children, className, style }) {
-  return (
-    <GridDiv id={id} className={className} style={style}>
-      {children}
-    </GridDiv>
-  );
+export default class GridLayout extends React.Component {
+  render() {
+    return (
+      <GridDiv id={this.props.id} className={this.props.className} style={this.props.style}>
+        {this.props.children}
+      </GridDiv>
+    );
+  }
 }
 
 

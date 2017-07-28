@@ -73,14 +73,24 @@ const LinearLayoutDiv = styled.div`
 `;
 
 
-export default function LinearLayout({ id, children, className, style, direction }) {
-  const directionClassName = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? verticalClassName : horizontalClassName);
+export default class LinearLayout extends React.Component {
+  render() {
+    const {
+      id,
+      children,
+      className,
+      style,
+      direction
+    } = this.props;
 
-  return (
-    <LinearLayoutDiv id={id} className={classnames(directionClassName, className)} style={style}>
-      {children}
-    </LinearLayoutDiv>
-  );
+    const directionClassName = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? verticalClassName : horizontalClassName);
+
+    return (
+      <LinearLayoutDiv id={id} className={classnames(directionClassName, className)} style={style}>
+        {children}
+      </LinearLayoutDiv>
+    );
+  }
 }
 
 
