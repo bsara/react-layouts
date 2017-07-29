@@ -48,8 +48,8 @@ const GridDiv = styled.div`
 
 
   > * {
-    grid-row:    --row-span;
-    grid-column: --col-span;
+    grid-row:    var(--row, span var(--row-span, 1));
+    grid-column: var(--column, span var(--col-span, 1));
   }
 `;
 
