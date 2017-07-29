@@ -59,7 +59,7 @@ var GridLayout = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         GridDiv,
-        { id: this.props.id, className: this.props.className, style: this.props.style },
+        { id: this.props.id, className: this.props.className, style: this.props.style, innerRef: this.props.domRef },
         this.props.children
       );
     }
@@ -76,5 +76,7 @@ GridLayout.propTypes = {
 
   className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.arrayOf(_propTypes2.default.string)]),
 
-  style: _propTypes2.default.object
+  style: _propTypes2.default.object,
+
+  domRef: _propTypes2.default.func
 };

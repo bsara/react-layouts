@@ -57,7 +57,7 @@ const GridDiv = styled.div`
 export default class GridLayout extends React.Component {
   render() {
     return (
-      <GridDiv id={this.props.id} className={this.props.className} style={this.props.style}>
+      <GridDiv id={this.props.id} className={this.props.className} style={this.props.style} innerRef={this.props.domRef}>
         {this.props.children}
       </GridDiv>
     );
@@ -76,5 +76,7 @@ GridLayout.propTypes = {
     PropTypes.arrayOf(PropTypes.string)
   ]),
 
-  style: PropTypes.object
+  style: PropTypes.object,
+
+  domRef: PropTypes.func
 };

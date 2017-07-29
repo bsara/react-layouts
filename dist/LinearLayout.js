@@ -81,7 +81,7 @@ var LinearLayout = function (_React$Component) {
 
       return _react2.default.createElement(
         LinearLayoutDiv,
-        { id: id, className: (0, _classnames2.default)(directionClassName, className), style: style },
+        { id: id, className: (0, _classnames2.default)(directionClassName, className), style: style, innerRef: this.props.domRef },
         children
       );
     }
@@ -100,5 +100,6 @@ LinearLayout.propTypes = {
 
   style: _propTypes2.default.object,
 
+  domRef: _propTypes2.default.func,
   direction: _propTypes2.default.oneOf(['h', 'horiz', 'horizontal', 'v', 'vert', 'vertical'])
 };

@@ -86,7 +86,7 @@ export default class LinearLayout extends React.Component {
     const directionClassName = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? verticalClassName : horizontalClassName);
 
     return (
-      <LinearLayoutDiv id={id} className={classnames(directionClassName, className)} style={style}>
+      <LinearLayoutDiv id={id} className={classnames(directionClassName, className)} style={style} innerRef={this.props.domRef}>
         {children}
       </LinearLayoutDiv>
     );
@@ -107,5 +107,6 @@ LinearLayout.propTypes = {
 
   style: PropTypes.object,
 
+  domRef:    PropTypes.func,
   direction: PropTypes.oneOf([ 'h', 'horiz', 'horizontal', 'v', 'vert', 'vertical' ])
 };
