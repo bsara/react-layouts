@@ -73,6 +73,7 @@ const LinearLayoutDiv = styled.div`
 `;
 
 
+// eslint-disable-next-line react/require-optimization
 export default class LinearLayout extends React.Component {
   render() {
     const {

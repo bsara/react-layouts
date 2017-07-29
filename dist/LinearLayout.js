@@ -57,6 +57,8 @@ var verticalClassName = 'vertical-' + classNameUniquePart;
 
 var LinearLayoutDiv = _styledComponents2.default.div(['display:flex;flex-wrap:nowrap;justify-content:var(--item-alignment,flex-start);> *{flex-grow:var(--stretch-items,0);}&.', '{flex-direction:row;> *{width:var(--item-size);min-width:var(--item-min-size);max-width:var(--item-max-size);&:not(:last-child){border-right:var(--item-separator,none);}}}&.', '{flex-direction:column;> *{height:var(--item-size);min-height:var(--item-min-size);max-height:var(--item-max-size);&:not(:last-child){border-bottom:var(--item-separator,none);}}}'], horizontalClassName, verticalClassName);
 
+// eslint-disable-next-line react/require-optimization
+
 var LinearLayout = function (_React$Component) {
   _inherits(LinearLayout, _React$Component);
 

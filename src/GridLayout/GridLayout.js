@@ -23,6 +23,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
+
 const GridDiv = styled.div`
   --_column-count-template: repeat(
     var(--column-count, 0),
@@ -36,7 +37,7 @@ const GridDiv = styled.div`
     var(--row-count, 0),
     minmax(
       var(--item-min-height, var(--item-min-size, 0)),
-      var(--item-height, var(--item-size, var(--item-max-height, var(--item-max-size, 1fr))))
+      var(--item-height,  var(--item-size, var(--item-max-height, var(--item-max-size, 1fr))))
     )
   );
 
@@ -48,12 +49,13 @@ const GridDiv = styled.div`
 
 
   > * {
-    grid-row:    var(--row, span var(--row-span, 1));
+    grid-row:    var(--row,    span var(--row-span, 1));
     grid-column: var(--column, span var(--col-span, 1));
   }
 `;
 
 
+// eslint-disable-next-line react/require-optimization
 export default class GridLayout extends React.Component {
   render() {
     return (

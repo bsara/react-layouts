@@ -12,3 +12,8 @@ env:
   browser: true
   es6:     true
   node:    true
+
+
+
+rules:
+  react/prefer-stateless-function: off
