@@ -37,8 +37,8 @@
     "bump:major": "npm --no-git-tag-version version major",
     "bump:minor": "npm --no-git-tag-version version minor",
     "bump:patch": "npm --no-git-tag-version version patch",
-    "postversion": "scripts/post-version.js",
-    "prepublishOnly": "git push && scripts/tag-version.js",
+    "postversion": "npx update-version-comment-refs && npx push-changed-version-files",
+    "prepublishOnly": "git push && npx tag-version",
     "postpublish": "npm run bump"
   },
   "dependencies": {
@@ -61,6 +61,7 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.3.0",
+    "npm-scripts-versioning": "^1.0.0-beta.1",
     "react-dom": "^15.6.1",
     "shelljs": "^0.7.8",
     "stylelint": "~8.0.0"

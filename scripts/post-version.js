@@ -36,10 +36,6 @@ const filePaths   = pkg.files.filter((filePath) => (filePath.startsWith("!") ===
 // -------------------------------------------------------------
 
 filePaths.forEach(function(filePath) {
-  if (filePath.startsWith('!')) {
-    return;
-  }
-
   sed('-i', RegExp(`\\*\\s+${pkg.name}\\s+\\d+\\.\\d+\\.\\d+(-\\w+){0,1}(\\.\\d+){0,1}`), `* ${pkg.name} ${versionName}`, path.join(__dirname, '..', filePath));
 });
 
