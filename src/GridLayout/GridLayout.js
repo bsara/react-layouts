@@ -50,13 +50,13 @@ const GridDiv = styled.div`
 
   > * {
     grid-row:    var(--row,    span var(--row-span, 1));
-    grid-column: var(--column, span var(--col-span, 1));
+    grid-column: var(--column, span var(--column-span, 1));
   }
 `;
 
 
 // eslint-disable-next-line react/require-optimization
-export default class GridLayout extends React.Component {
+export default class GridLayout extends React.PureComponent {
   render() {
     return (
       <GridDiv id={this.props.id} className={this.props.className} style={this.props.style} innerRef={this.props.domRef}>

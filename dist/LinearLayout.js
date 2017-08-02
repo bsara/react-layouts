@@ -59,8 +59,8 @@ var LinearLayoutDiv = _styledComponents2.default.div(['display:flex;flex-wrap:no
 
 // eslint-disable-next-line react/require-optimization
 
-var LinearLayout = function (_React$Component) {
-  _inherits(LinearLayout, _React$Component);
+var LinearLayout = function (_React$PureComponent) {
+  _inherits(LinearLayout, _React$PureComponent);
 
   function LinearLayout() {
     _classCallCheck(this, LinearLayout);
@@ -90,7 +90,7 @@ var LinearLayout = function (_React$Component) {
   }]);
 
   return LinearLayout;
-}(_react2.default.Component);
+}(_react2.default.PureComponent);
 
 exports.default = LinearLayout;
 
