@@ -49,6 +49,7 @@ const GridDiv = styled.div`
 
 
   > * {
+    grid-area:   var(--area);
     grid-row:    var(--row,    span var(--row-span, 1));
     grid-column: var(--column, span var(--column-span, 1));
   }
