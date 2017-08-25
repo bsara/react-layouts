@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -72,10 +74,9 @@ var LinearLayout = function (_React$PureComponent) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          id = _props.id,
           children = _props.children,
           className = _props.className,
-          style = _props.style,
+          domRef = _props.domRef,
           direction = _props.direction;
 
 
@@ -83,7 +84,7 @@ var LinearLayout = function (_React$PureComponent) {
 
       return _react2.default.createElement(
         LinearLayoutDiv,
-        { id: id, className: (0, _classnames2.default)(directionClassName, className), style: style, innerRef: this.props.domRef },
+        _extends({}, this.props, { className: (0, _classnames2.default)(directionClassName, className), innerRef: domRef }),
         children
       );
     }
