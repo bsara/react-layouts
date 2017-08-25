@@ -60,7 +60,7 @@ const GridDiv = styled.div`
 export default class GridLayout extends React.PureComponent {
   render() {
     return (
-      <GridDiv id={this.props.id} className={this.props.className} style={this.props.style} innerRef={this.props.domRef}>
+      <GridDiv {...this.props} innerRef={this.props.domRef}>
         {this.props.children}
       </GridDiv>
     );

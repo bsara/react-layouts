@@ -77,17 +77,16 @@ const LinearLayoutDiv = styled.div`
 export default class LinearLayout extends React.PureComponent {
   render() {
     const {
-      id,
       children,
       className,
-      style,
+      domRef,
       direction
     } = this.props;
 
     const directionClassName = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? verticalClassName : horizontalClassName);
 
     return (
-      <LinearLayoutDiv id={id} className={classnames(directionClassName, className)} style={style} innerRef={this.props.domRef}>
+      <LinearLayoutDiv {...this.props} className={classnames(directionClassName, className)} innerRef={domRef}>
         {children}
       </LinearLayoutDiv>
     );
