@@ -51,6 +51,7 @@ const LinearLayoutDiv = styled.div`
       max-width: var(--item-max-size);
 
       &:not(:last-child) {
+        margin-right: var(--item-gap);
         border-right: var(--item-separator, none);
       }
     }
@@ -66,6 +67,7 @@ const LinearLayoutDiv = styled.div`
       max-height: var(--item-max-size);
 
       &:not(:last-child) {
+        margin-bottom: var(--item-gap);
         border-bottom: var(--item-separator, none);
       }
     }

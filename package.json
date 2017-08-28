@@ -51,7 +51,7 @@
   "devDependencies": {
     "@bsara/eslint-config-react": "^1.1.0",
     "@bsara/stylelint-config": "^1.0.1",
-    "@storybook/react": "^3.2.4",
+    "@storybook/react": "^3.2.8",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
