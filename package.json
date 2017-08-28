@@ -28,7 +28,7 @@
     "build": "npm run clean && npx babel src -d ./build",
     "dist": "npm run build && rm -rf ./dist && mkdir ./dist && cp ./build/**/*.js ./dist",
     "sb": "npm run storybook",
-    "storybook": "npx start-storybook -p 9900 -c .storybook",
+    "storybook": "npx start-storybook -p 9800 -c .storybook",
     "l": "npm run lint",
     "lint": "npm run lint:scripts && npm run lint:styles",
     "lint:scripts": "npx eslint .",
