@@ -18,5 +18,7 @@
         "preprocessor": true
       }
     ]
-  ]
+  ],
+
+  "sourceMaps": true
 }
