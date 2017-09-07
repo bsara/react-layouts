@@ -57,7 +57,7 @@ var classNameUniquePart = (0, _randomatic2.default)('aA', 6);
 var horizontalClassName = 'horizontal-' + classNameUniquePart;
 var verticalClassName = 'vertical-' + classNameUniquePart;
 
-var LinearLayoutDiv = _styledComponents2.default.div(['display:flex;flex-wrap:nowrap;justify-content:var(--item-alignment,flex-start);> *{flex-grow:var(--stretch-items,0);}&.', '{flex-direction:row;> *{width:var(--item-size);min-width:var(--item-min-size);max-width:var(--item-max-size);&:not(:last-child){margin-right:var(--item-gap);border-right:var(--item-separator,none);}}}&.', '{flex-direction:column;> *{height:var(--item-size);min-height:var(--item-min-size);max-height:var(--item-max-size);&:not(:last-child){margin-bottom:var(--item-gap);border-bottom:var(--item-separator,none);}}}'], horizontalClassName, verticalClassName);
+var LinearLayoutDiv = _styledComponents2.default.div(['display:flex;flex-wrap:nowrap;justify-content:var(--item-alignment,flex-start);> *{flex-grow:var(--stretch-items,0);}&.', '{flex-direction:row;> *{width:var(--item-size);min-width:var(--item-min-size);max-width:var(--item-max-size);&:not(:last-child){margin-right:var(--item-gap);border-right:var(--item-separator,none);}}}&.', '{flex-direction:column;> *{height:var(--item-size);min-height:var(--item-min-size);max-height:var(--item-max-size);&:not(:last-child){margin-bottom:var(--item-gap);border-bottom:var(--item-separator,none);}}}> * > *{--item-alignemnt:unset;--stretch-items:unset;--item-gap:unset;--item-separator:unset;--item-size:unset;--item-min-size:unset;--item-max-size:unset;}'], horizontalClassName, verticalClassName);
 
 // eslint-disable-next-line react/require-optimization
 
