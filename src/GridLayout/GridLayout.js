@@ -52,34 +52,35 @@ const GridDiv = styled.div`
     grid-row:    var(--row,    span var(--row-span, 1));
     grid-column: var(--column, span var(--column-span, 1));
     grid-area:   var(--area, unset);
+  }
 
-    > * {
-      --areas-template:   unset;
-      --columns-template: unset;
-      --rows-template:    unset;
 
-      --column-count: unset;
-      --row-count:    unset;
+  > * > * {
+    --areas-template:   unset;
+    --columns-template: unset;
+    --rows-template:    unset;
 
-      --area:   unset;
-      --row:    unset;
-      --column: unset;
+    --column-count: unset;
+    --row-count:    unset;
 
-      --row-span:    unset;
-      --column-span: unset;
+    --area:   unset;
+    --row:    unset;
+    --column: unset;
 
-      --item-gap: unset;
+    --row-span:    unset;
+    --column-span: unset;
 
-      --item-size:       unset;
-      --item-width:      unset;
-      --item-height:     unset;
-      --item-min-size:   unset;
-      --item-max-size:   unset;
-      --item-min-width:  unset;
-      --item-max-width:  unset;
-      --item-min-height: unset;
-      --item-max-height: unset;
-    }
+    --item-gap: unset;
+
+    --item-size:       unset;
+    --item-width:      unset;
+    --item-height:     unset;
+    --item-min-size:   unset;
+    --item-max-size:   unset;
+    --item-min-width:  unset;
+    --item-max-width:  unset;
+    --item-min-height: unset;
+    --item-max-height: unset;
   }
 `;
 
