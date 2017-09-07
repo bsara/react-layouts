@@ -45,12 +45,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * PERFORMANCE OF THIS SOFTWARE.
  */
 
-var GridDiv = _styledComponents2.default.div(['--_column-count-template:repeat( var(--column-count,0),minmax( var(--item-min-width,var(--item-min-size,0)),var(--item-width,var(--item-size,var(--item-max-width,var(--item-max-size,1fr)))) ) );--_row-count-template:repeat( var(--row-count,0),minmax( var(--item-min-height,var(--item-min-size,0)),var(--item-height,var(--item-size,var(--item-max-height,var(--item-max-size,1fr)))) ) );display:grid;grid-template-areas:var(--areas-template);grid-template-columns:var(--columns-template,var(--_column-count-template));grid-template-rows:var(--rows-template,var(--_row-count-template));grid-gap:var(--item-gap);> *{grid-area:var(--area);grid-row:var(--row,span var(--row-span,1));grid-column:var(--column,span var(--column-span,1));}']);
+var GridDiv = _styledComponents2.default.div(['--_column-count-template:repeat( var(--column-count,0),minmax( var(--item-min-width,var(--item-min-size,0)),var(--item-width,var(--item-size,var(--item-max-width,var(--item-max-size,1fr)))) ) );--_row-count-template:repeat( var(--row-count,0),minmax( var(--item-min-height,var(--item-min-size,0)),var(--item-height,var(--item-size,var(--item-max-height,var(--item-max-size,1fr)))) ) );display:grid;grid-template-columns:var(--columns-template,var(--_column-count-template,unset));grid-template-rows:var(--rows-template,var(--_row-count-template,unset));grid-template-areas:var(--areas-template,unset);grid-gap:var(--item-gap,unset);> *{grid-row:var(--row,span var(--row-span,1));grid-column:var(--column,span var(--column-span,1));grid-area:var(--area,unset);}']);
 
 // eslint-disable-next-line react/require-optimization
 
-var GridLayout = function (_React$PureComponent) {
-  _inherits(GridLayout, _React$PureComponent);
+var GridLayout = function (_React$Component) {
+  _inherits(GridLayout, _React$Component);
 
   function GridLayout() {
     _classCallCheck(this, GridLayout);
@@ -70,7 +70,7 @@ var GridLayout = function (_React$PureComponent) {
   }]);
 
   return GridLayout;
-}(_react2.default.PureComponent);
+}(_react2.default.Component);
 
 exports.default = GridLayout;
 

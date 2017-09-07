@@ -42,22 +42,22 @@ const GridDiv = styled.div`
   );
 
   display:               grid;
-  grid-template-areas:   var(--areas-template);
-  grid-template-columns: var(--columns-template, var(--_column-count-template));
-  grid-template-rows:    var(--rows-template, var(--_row-count-template));
-  grid-gap:              var(--item-gap);
+  grid-template-columns: var(--columns-template, var(--_column-count-template, unset));
+  grid-template-rows:    var(--rows-template, var(--_row-count-template, unset));
+  grid-template-areas:   var(--areas-template, unset);
+  grid-gap:              var(--item-gap, unset);
 
 
   > * {
-    grid-area:   var(--area);
     grid-row:    var(--row,    span var(--row-span, 1));
     grid-column: var(--column, span var(--column-span, 1));
+    grid-area:   var(--area, unset);
   }
 `;
 
 
 // eslint-disable-next-line react/require-optimization
-export default class GridLayout extends React.PureComponent {
+export default class GridLayout extends React.Component {
   render() {
     return (
       <GridDiv {...this.props} innerRef={this.props.domRef}>
