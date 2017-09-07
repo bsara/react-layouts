@@ -72,19 +72,6 @@ const LinearLayoutDiv = styled.div`
       }
     }
   }
-
-
-  > * > * {
-    --item-alignemnt: unset;
-    --stretch-items:  unset;
-
-    --item-gap:       unset;
-    --item-separator: unset;
-
-    --item-size:     unset;
-    --item-min-size: unset;
-    --item-max-size: unset;
-  }
 `;
 
 
