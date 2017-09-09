@@ -38,7 +38,10 @@ const LinearLayoutDiv = styled.div`
 
 
   > * {
-    flex-grow: var(--stretch-items, 0);
+    flex-grow:   var(--stretch-items, 0);
+    flex-shrink: var(--shrink-items, 0);
+    flex-basis:  var(--stretch-basis);
+    box-sizing:  border-box;
   }
 
 
@@ -50,8 +53,12 @@ const LinearLayoutDiv = styled.div`
       min-width: var(--item-min-size);
       max-width: var(--item-max-size);
 
+      &:not(:first-child) {
+        margin-left: calc(var(--item-gap) / 2);
+      }
+
       &:not(:last-child) {
-        margin-right: var(--item-gap);
+        margin-right: calc(var(--item-gap) / 2);
         border-right: var(--item-separator, none);
       }
     }
@@ -66,8 +73,12 @@ const LinearLayoutDiv = styled.div`
       min-height: var(--item-min-size);
       max-height: var(--item-max-size);
 
+      &:not(:first-child) {
+        margin-top: calc(var(--item-gap) / 2);
+      }
+
       &:not(:last-child) {
-        margin-bottom: var(--item-gap);
+        margin-bottom: calc(var(--item-gap) / 2);
         border-bottom: var(--item-separator, none);
       }
     }
