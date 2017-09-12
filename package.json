@@ -20,20 +20,17 @@
     "layout"
   ],
   "files": [
-    "./*Layout.js",
-    "./*Layout.js.map",
-    "./*Layout.css",
-    "./*Layout.css.map",
+    "./*Layout/*",
     "./src/**/*Layout.js",
     "./src/**/*Layout.css"
   ],
   "scripts": {
-    "clean:dist": "rm -f ./*Layout.js* && rm -f ./*Layout.css*",
+    "clean:dist": "rm -rf ./*Layout/",
     "clean": "rm -rf ./build",
-    "build:styles": "npx postcss ./src/**/*Layout.css --map -d ./build",
-    "build:scripts": "npx babel src/** --source-maps -d ./build",
+    "build:styles": "npx postcss ./src/**/*Layout.css --map -b ./src -d ./build",
+    "build:scripts": "npx babel ./src --source-maps -d ./build && cd ./src && cp --parents ./**/package.json ../build && cd ..",
     "build": "npm run clean && npm run build:styles && npm run build:scripts",
-    "dist:copyBuild": "cp ./build/*.js* ./ && cp ./build/*.css* ./ && find . -name '*.map' -exec sed -i 's/\\.\\.\\/src/\\.\\/src/' {} \\;",
+    "dist:copyBuild": "cp -r ./build/* ./ && find . -name '*Layout/*.map' -exec sed -i 's/\\.\\.\\/\\.\\.\\/src/\\.\\.\\/src/' {} \\;",
     "dist": "npm run build && npm run clean:dist && npm run dist:copyBuild",
     "sb": "npm run storybook",
     "storybook": "npx start-storybook -p 9800 -c .storybook",
