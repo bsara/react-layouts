@@ -1,10 +1,12 @@
 const path = require('path');
 
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
+// region Constants
 
 const SRC_DIR          = path.resolve(__dirname, '../src');
-const NODE_MODULES_DIR = path.resolve(SRC_DIR, 'node_modules');
+const NODE_MODULES_DIR = path.resolve(__dirname, '../node_modules');
+
+// endregion
 
 
 
@@ -19,33 +21,28 @@ module.exports = {
   module: {
     rules: [
       {
-        test:    /.css$/,
-        include: SRC_DIR,
-        exclude: NODE_MODULES_DIR,
-        use:     ExtractTextWebpackPlugin.extract({
-          fallback: 'style-loader',
-          use:      {
-            loader:  'css-loader',
-            options: {
-              modules:        true,
-              importLoaders:  1,
-              localIdentName: 'react-layouts-[local]'
-            }
-          }
-        })
-      },
-
-      {
         test:    /.js$/,
         include: SRC_DIR,
         exclude: NODE_MODULES_DIR,
         loader:  'babel-loader'
+      },
+
+      {
+        test:    /.css$/,
+        include: SRC_DIR,
+        exclude: NODE_MODULES_DIR,
+        use:     [
+          'style-loader',
+          {
+            loader:  'css-loader',
+            options: {
+              modules:        true,
+              importLoaders:  1,
+              localIdentName: 'rl-[sha1:hash:8]'
+            }
+          }
+        ]
       }
     ]
-  },
-
-
-  plugins: [
-    new ExtractTextWebpackPlugin('styles.css')
-  ]
+  }
 };

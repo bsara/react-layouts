@@ -61,7 +61,7 @@ var GridLayout = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, elementProps, { className: 'react-layouts-grid-layout', ref: this.props.domRef }),
+        _extends({}, elementProps, { className: 'rl-aef45beb', ref: this.props.domRef }),
         this.props.children
       );
     }

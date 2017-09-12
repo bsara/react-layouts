@@ -20,18 +20,19 @@
     "layout"
   ],
   "files": [
-    "*Layout.js",
-    "*Layout.js.map",
-    "*Layout.css",
-    "./src/**/*.js",
-    "./src/**/*.css"
+    "./*Layout.js",
+    "./*Layout.js.map",
+    "./*Layout.css",
+    "./*Layout.css.map",
+    "./src/**/*Layout.js",
+    "./src/**/*Layout.css"
   ],
   "scripts": {
     "clean:dist": "rm -f ./*Layout.js* && rm -f ./*Layout.css*",
     "clean": "rm -rf ./build",
-    "build:styles": "npx webpack --config webpack.config.js && rm ./build/*.js*",
+    "build:styles": "npx postcss ./src/**/*Layout.css --map -d ./build",
     "build:scripts": "npx babel src/** --source-maps -d ./build",
-    "build": "npm run build:styles && npm run build:scripts",
+    "build": "npm run clean && npm run build:styles && npm run build:scripts",
     "dist:copyBuild": "cp ./build/*.js* ./ && cp ./build/*.css* ./ && find . -name '*.map' -exec sed -i 's/\\.\\.\\/src/\\.\\/src/' {} \\;",
     "dist": "npm run build && npm run clean:dist && npm run dist:copyBuild",
     "sb": "npm run storybook",
@@ -57,22 +58,21 @@
     "@bsara/eslint-config-react": "^1.1.0",
     "@bsara/stylelint-config": "^1.0.1",
     "@storybook/react": "^3.2.8",
+    "autoprefixer": "^7.1.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.2",
+    "babel-eslint": "^8.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.16",
-    "css-loader": "^0.28.7",
     "eslint": "^4.4.1",
-    "extract-text-webpack-plugin": "^3.0.0",
     "npm-scripts-versioning": "^1.0.0-beta.5",
+    "postcss-cli": "^4.1.1",
+    "postcss-modules": "^0.8.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-nesting": "^4.1.0",
     "react-dom": "^15.6.1",
-    "style-loader": "^0.18.2",
-    "stylelint": "~8.0.0",
-    "webpack": "^3.5.6"
+    "stylelint": "~8.0.0"
   }
 }

@@ -17,7 +17,7 @@
       {
         "context":                "./",
         "exclude":                "node_modules",
-        "generateScopedName":     "react-layouts-[local]",
+        "generateScopedName":     "rl-[sha1:hash:8]",
         "handleMissingStyleName": "throw"
       }
     ]

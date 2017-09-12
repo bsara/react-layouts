@@ -26,9 +26,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _styleModuleImportMap = {
   './LinearLayout.css': {
-    'linear-layout': 'react-layouts-linear-layout',
-    'horizontal': 'react-layouts-horizontal',
-    'vertical': 'react-layouts-vertical'
+    'linear-layout': 'rl-d8af8a4c',
+    'horizontal': 'rl-c00799cd',
+    'vertical': 'rl-ce2602cf'
   }
 };
 

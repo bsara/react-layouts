@@ -1,77 +1,92 @@
-.react-layouts-linear-layout {
+/**
+ * ISC License (ISC)
+ *
+ * Copyright (c) 2017, Brandon D. Sara (https://bsara.pro/)
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+ * REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+ * INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+ * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+ * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ * PERFORMANCE OF THIS SOFTWARE.
+ */
+.rl-d8af8a4c {
+  display:         -webkit-box;
+  display:         -ms-flexbox;
   display:         flex;
-  flex-wrap:       nowrap;
-  justify-content: var(--item-alignment, flex-start);
+  -ms-flex-wrap:       nowrap;
+      flex-wrap:       nowrap;
+  -webkit-box-pack: var(--item-alignment, flex-start);
+      -ms-flex-pack: var(--item-alignment, flex-start);
+          justify-content: var(--item-alignment, flex-start)
 }
-
-
-
-.react-layouts-linear-layout > * {
-  flex-grow:   var(--stretch-items, 0);
-  flex-shrink: var(--shrink-items, 0);
-  flex-basis:  var(--stretch-basis);
-  box-sizing:  border-box;
+.rl-d8af8a4c > * {
+  -webkit-box-flex:   var(--stretch-items, 0);
+      -ms-flex-positive:   var(--stretch-items, 0);
+          flex-grow:   var(--stretch-items, 0);
+  -ms-flex-negative: var(--shrink-items, 0);
+      flex-shrink: var(--shrink-items, 0);
+  -ms-flex-preferred-size:  var(--stretch-basis);
+      flex-basis:  var(--stretch-basis);
+  -webkit-box-sizing:  border-box;
+          box-sizing:  border-box;
 }
-
-
-
-.react-layouts-linear-layout.react-layouts-horizontal {
-  flex-direction: row;
+.rl-d8af8a4c.rl-c00799cd {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row
 }
-
-.react-layouts-linear-layout.react-layouts-horizontal > * {
+.rl-d8af8a4c.rl-c00799cd > * {
   width:     var(--item-size);
   min-width: var(--item-min-size);
-  max-width: var(--item-max-size);
+  max-width: var(--item-max-size)
 }
-
-.react-layouts-linear-layout.react-layouts-horizontal > *:not(:first-child) {
+.rl-d8af8a4c.rl-c00799cd > *:not(:first-child) {
   margin-left: calc(var(--item-gap) / 2);
 }
-
-.react-layouts-linear-layout.react-layouts-horizontal > *:not(:last-child) {
+.rl-d8af8a4c.rl-c00799cd > *:not(:last-child) {
   margin-right: calc(var(--item-gap) / 2);
   border-right: var(--item-separator, none);
 }
-
-
-
-.react-layouts-linear-layout.react-layouts-vertical {
-  flex-direction: column;
+.rl-d8af8a4c.rl-ce2602cf {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column
 }
-
-.react-layouts-linear-layout.react-layouts-vertical > * {
+.rl-d8af8a4c.rl-ce2602cf > * {
   height:     var(--item-size);
   min-height: var(--item-min-size);
-  max-height: var(--item-max-size);
+  max-height: var(--item-max-size)
 }
-
-.react-layouts-linear-layout.react-layouts-vertical > *:not(:first-child) {
+.rl-d8af8a4c.rl-ce2602cf > *:not(:first-child) {
   margin-top: calc(var(--item-gap) / 2);
 }
-
-.react-layouts-linear-layout.react-layouts-vertical > *:not(:last-child) {
+.rl-d8af8a4c.rl-ce2602cf > *:not(:last-child) {
   margin-bottom: calc(var(--item-gap) / 2);
   border-bottom: var(--item-separator, none);
 }
-
-
-
-/* Reset layout children custom props in case child is special layout */
-.react-layouts-linear-layout > * {
-  --item-alignment: initial;
+.rl-d8af8a4c > * {/*stylelint-disable-line no-duplicate-selectors
+ *//*Reset layout children custom props in case child is special layout
+ */
+  --item-alignment: initial
 }
-
-/* Reset layout grandchildren custom props in case child is special layout */
-.react-layouts-linear-layout > * > * {
+.rl-d8af8a4c > * > * {/*Reset layout grandchildren custom props in case child is special layout
+ */
   --stretch-items: initial;
   --shrink-items:  initial;
   --stretch-basis: initial;
-
   --item-gap:       initial;
   --item-separator: initial;
-
   --item-size:     initial;
   --item-min-size: initial;
   --item-max-size: initial;
 }
+
+/*# sourceMappingURL=LinearLayout.css.map */
