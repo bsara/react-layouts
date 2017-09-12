@@ -1,6 +1,7 @@
 {
   "ignore": [
-    "**/story.*"
+    "**/story.*",
+    "node_modules"
   ],
 
   "presets": [
@@ -12,10 +13,12 @@
 
   "plugins": [
     [
-      "styled-components",
+      "react-css-modules",
       {
-        "displayName":  false,
-        "preprocessor": true
+        "context":                "./",
+        "exclude":                "node_modules",
+        "generateScopedName":     "react-layouts-[local]",
+        "handleMissingStyleName": "throw"
       }
     ]
   ],

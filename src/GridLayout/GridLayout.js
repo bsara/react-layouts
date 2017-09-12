@@ -20,46 +20,20 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
+import './GridLayout.css';
 
-
-
-const GridDiv = styled.div`
-  display: grid;
-
-  grid-template-columns: var(--columns-template, repeat(
-                           var(--column-count, 0),
-                           minmax(
-                             var(--item-min-width, var(--item-min-size, 0)),
-                             var(--item-width, var(--item-size, var(--item-max-width, var(--item-max-size, 1fr))))
-                           )
-                         ));
-  grid-template-rows:  var(--rows-template, repeat(
-                         var(--row-count, 0),
-                         minmax(
-                           var(--item-min-height, var(--item-min-size, 0)),
-                           var(--item-height,  var(--item-size, var(--item-max-height, var(--item-max-size, 1fr))))
-                         )
-                       ));
-  grid-template-areas: var(--areas-template);
-  grid-gap:            var(--item-gap);
-
-
-  > * {
-    grid-row:    var(--row,    var(--area, (span var(--row-span, 1))));
-    grid-column: var(--column, var(--area, (span var(--column-span, 1))));
-    grid-area:   var(--area);
-  }
-`;
 
 
 // eslint-disable-next-line react/require-optimization
 export default class GridLayout extends React.Component {
   render() {
+    const elementProps = Object.assign({}, this.props);
+    delete elementProps.domRef;
+
     return (
-      <GridDiv {...this.props} innerRef={this.props.domRef}>
+      <div {...elementProps} styleName="grid-layout" ref={this.props.domRef}>
         {this.props.children}
-      </GridDiv>
+      </div>
     );
   }
 }

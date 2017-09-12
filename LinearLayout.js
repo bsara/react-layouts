@@ -8,6 +8,10 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _getClassName2 = require('babel-plugin-react-css-modules/dist/browser/getClassName');
+
+var _getClassName3 = _interopRequireDefault(_getClassName2);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -16,19 +20,17 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _randomatic = require('randomatic');
-
-var _randomatic2 = _interopRequireDefault(_randomatic);
-
-var _styledComponents = require('styled-components');
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
+require('./LinearLayout.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _styleModuleImportMap = {
+  './LinearLayout.css': {
+    'linear-layout': 'react-layouts-linear-layout',
+    'horizontal': 'react-layouts-horizontal',
+    'vertical': 'react-layouts-vertical'
+  }
+};
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -53,16 +55,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * PERFORMANCE OF THIS SOFTWARE.
  */
 
-var classNameUniquePart = (0, _randomatic2.default)('aA', 6);
-var horizontalClassName = 'horizontal-' + classNameUniquePart;
-var verticalClassName = 'vertical-' + classNameUniquePart;
-
-var LinearLayoutDiv = _styledComponents2.default.div(['display:flex;flex-wrap:nowrap;justify-content:var(--item-alignment,flex-start);> *{flex-grow:var(--stretch-items,0);flex-shrink:var(--shrink-items,0);flex-basis:var(--stretch-basis);box-sizing:border-box;}&.', '{flex-direction:row;> *{width:var(--item-size);min-width:var(--item-min-size);max-width:var(--item-max-size);&:not(:first-child){margin-left:calc(var(--item-gap) / 2);}&:not(:last-child){margin-right:calc(var(--item-gap) / 2);border-right:var(--item-separator,none);}}}&.', '{flex-direction:column;> *{height:var(--item-size);min-height:var(--item-min-size);max-height:var(--item-max-size);&:not(:first-child){margin-top:calc(var(--item-gap) / 2);}&:not(:last-child){margin-bottom:calc(var(--item-gap) / 2);border-bottom:var(--item-separator,none);}}}'], horizontalClassName, verticalClassName);
-
 // eslint-disable-next-line react/require-optimization
-
-var LinearLayout = function (_React$PureComponent) {
-  _inherits(LinearLayout, _React$PureComponent);
+var LinearLayout = function (_React$Component) {
+  _inherits(LinearLayout, _React$Component);
 
   function LinearLayout() {
     _classCallCheck(this, LinearLayout);
@@ -80,18 +75,23 @@ var LinearLayout = function (_React$PureComponent) {
           direction = _props.direction;
 
 
-      var directionClassName = direction === 'v' || direction === 'vert' || direction === 'vertical' ? verticalClassName : horizontalClassName;
+      var elementProps = Object.assign({}, this.props);
+      delete elementProps.domRef;
+      delete elementProps.direction;
+
+      var isDirectionVertical = direction === 'v' || direction === 'vert' || direction === 'vertical';
 
       return _react2.default.createElement(
-        LinearLayoutDiv,
-        _extends({}, this.props, { className: (0, _classnames2.default)(directionClassName, className), innerRef: domRef }),
+        'div',
+        _extends({}, elementProps, { ref: domRef, className: (0, _getClassName3.default)('linear-layout ' + (isDirectionVertical ? 'vertical' : 'horizontal') + ' ' + className, _styleModuleImportMap)
+        }),
         children
       );
     }
   }]);
 
   return LinearLayout;
-}(_react2.default.PureComponent);
+}(_react2.default.Component);
 
 exports.default = LinearLayout;
 

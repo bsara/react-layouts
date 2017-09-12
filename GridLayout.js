@@ -16,9 +16,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = require('styled-components');
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
+require('./GridLayout.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,10 +43,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * PERFORMANCE OF THIS SOFTWARE.
  */
 
-var GridDiv = _styledComponents2.default.div(['display:grid;grid-template-columns:var(--columns-template,repeat( var(--column-count,0),minmax( var(--item-min-width,var(--item-min-size,0)),var(--item-width,var(--item-size,var(--item-max-width,var(--item-max-size,1fr)))) ) ));grid-template-rows:var(--rows-template,repeat( var(--row-count,0),minmax( var(--item-min-height,var(--item-min-size,0)),var(--item-height,var(--item-size,var(--item-max-height,var(--item-max-size,1fr)))) ) ));grid-template-areas:var(--areas-template);grid-gap:var(--item-gap);> *{grid-row:var(--row,var(--area,(span var(--row-span,1))));grid-column:var(--column,var(--area,(span var(--column-span,1))));grid-area:var(--area);}']);
-
 // eslint-disable-next-line react/require-optimization
-
 var GridLayout = function (_React$Component) {
   _inherits(GridLayout, _React$Component);
 
@@ -61,9 +56,12 @@ var GridLayout = function (_React$Component) {
   _createClass(GridLayout, [{
     key: 'render',
     value: function render() {
+      var elementProps = Object.assign({}, this.props);
+      delete elementProps.domRef;
+
       return _react2.default.createElement(
-        GridDiv,
-        _extends({}, this.props, { innerRef: this.props.domRef }),
+        'div',
+        _extends({}, elementProps, { className: 'react-layouts-grid-layout', ref: this.props.domRef }),
         this.props.children
       );
     }

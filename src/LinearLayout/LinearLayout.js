@@ -20,74 +20,12 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
 
-import classnames from 'classnames';
-import randomatic from 'randomatic';
-import styled     from 'styled-components';
+import './LinearLayout.css';
 
-
-
-const classNameUniquePart = randomatic('aA', 6);
-const horizontalClassName = `horizontal-${classNameUniquePart}`;
-const verticalClassName   = `vertical-${classNameUniquePart}`;
-
-
-const LinearLayoutDiv = styled.div`
-  display:         flex;
-  flex-wrap:       nowrap;
-  justify-content: var(--item-alignment, flex-start);
-
-
-  > * {
-    flex-grow:   var(--stretch-items, 0);
-    flex-shrink: var(--shrink-items, 0);
-    flex-basis:  var(--stretch-basis);
-    box-sizing:  border-box;
-  }
-
-
-  &.${horizontalClassName} {
-    flex-direction: row;
-
-    > * {
-      width:     var(--item-size);
-      min-width: var(--item-min-size);
-      max-width: var(--item-max-size);
-
-      &:not(:first-child) {
-        margin-left: calc(var(--item-gap) / 2);
-      }
-
-      &:not(:last-child) {
-        margin-right: calc(var(--item-gap) / 2);
-        border-right: var(--item-separator, none);
-      }
-    }
-  }
-
-
-  &.${verticalClassName} {
-    flex-direction: column;
-
-    > * {
-      height:     var(--item-size);
-      min-height: var(--item-min-size);
-      max-height: var(--item-max-size);
-
-      &:not(:first-child) {
-        margin-top: calc(var(--item-gap) / 2);
-      }
-
-      &:not(:last-child) {
-        margin-bottom: calc(var(--item-gap) / 2);
-        border-bottom: var(--item-separator, none);
-      }
-    }
-  }
-`;
 
 
 // eslint-disable-next-line react/require-optimization
-export default class LinearLayout extends React.PureComponent {
+export default class LinearLayout extends React.Component {
   render() {
     const {
       children,
@@ -96,12 +34,16 @@ export default class LinearLayout extends React.PureComponent {
       direction
     } = this.props;
 
-    const directionClassName = ((direction === 'v' || direction === 'vert' || direction === 'vertical') ? verticalClassName : horizontalClassName);
+    const elementProps = Object.assign({}, this.props);
+    delete elementProps.domRef;
+    delete elementProps.direction;
+
+    const isDirectionVertical = (direction === 'v' || direction === 'vert' || direction === 'vertical');
 
     return (
-      <LinearLayoutDiv {...this.props} className={classnames(directionClassName, className)} innerRef={domRef}>
+      <div {...elementProps} styleName={`linear-layout ${isDirectionVertical ? 'vertical' : 'horizontal'} ${className}`} ref={domRef}>
         {children}
-      </LinearLayoutDiv>
+      </div>
     );
   }
 }
