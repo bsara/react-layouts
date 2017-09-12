@@ -20,9 +20,9 @@
     "layout"
   ],
   "files": [
-    "./*Layout/*",
-    "./src/**/*Layout.js",
-    "./src/**/*Layout.css"
+    "*Layout/*",
+    "src/**/*Layout.js",
+    "src/**/*Layout.css"
   ],
   "scripts": {
     "clean:dist": "rm -rf ./*Layout/",
