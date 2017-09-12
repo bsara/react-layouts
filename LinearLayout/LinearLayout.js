@@ -83,7 +83,7 @@ var LinearLayout = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, elementProps, { ref: domRef, className: (0, _getClassName3.default)('linear-layout ' + (isDirectionVertical ? 'vertical' : 'horizontal') + ' ' + className, _styleModuleImportMap)
+        _extends({}, elementProps, { ref: domRef, className: (className ? className + ' ' : '') + (0, _getClassName3.default)('linear-layout ' + (isDirectionVertical ? 'vertical' : 'horizontal'), _styleModuleImportMap)
         }),
         children
       );

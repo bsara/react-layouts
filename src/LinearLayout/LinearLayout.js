@@ -41,7 +41,7 @@ export default class LinearLayout extends React.Component {
     const isDirectionVertical = (direction === 'v' || direction === 'vert' || direction === 'vertical');
 
     return (
-      <div {...elementProps} styleName={`linear-layout ${isDirectionVertical ? 'vertical' : 'horizontal'} ${className}`} ref={domRef}>
+      <div {...elementProps} styleName={`linear-layout ${isDirectionVertical ? 'vertical' : 'horizontal'}`} className={className} ref={domRef}>
         {children}
       </div>
     );

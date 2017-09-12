@@ -31,7 +31,7 @@ export default class GridLayout extends React.Component {
     delete elementProps.domRef;
 
     return (
-      <div {...elementProps} styleName="grid-layout" ref={this.props.domRef}>
+      <div {...elementProps} styleName="grid-layout" className={elementProps.className} ref={this.props.domRef}>
         {this.props.children}
       </div>
     );
