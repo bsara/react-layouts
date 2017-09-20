@@ -36,8 +36,8 @@
   grid-gap:            var(--item-gap)
 }
 .rl-aef45beb > * {
-  grid-row:    var(--row, var(--area, (span var(--row-span, 1))));
-  grid-column: var(--column, var(--area, (span var(--column-span, 1))));
+  grid-row:    var(--row, var(--area, span var(--row-span, 1)));
+  grid-column: var(--column, var(--area, span var(--column-span, 1)));
   grid-area:   var(--area);
   -webkit-box-sizing:  border-box;
           box-sizing:  border-box;
