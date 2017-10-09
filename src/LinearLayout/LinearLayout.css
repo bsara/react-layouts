@@ -18,8 +18,8 @@
 .linear-layout {
   display:         flex;
   flex-wrap:       nowrap;
-  align-items:     var(--item-alignment, initial);
-  justify-content: var(--item-justification, flex-start);
+  justify-content: var(--item-halign, flex-start);
+  align-items:     var(--item-valign, initial);
 
 
   & > * {
@@ -74,8 +74,8 @@
   & > * { /* stylelint-disable-line no-duplicate-selectors */
     /* Reset layout children custom props in case child is special layout */
 
-    --item-alignment:     initial;
-    --item-justification: initial;
+    --item-halign: initial;
+    --item-valign: initial;
 
     & > * {
       /* Reset layout grandchildren custom props in case child is special layout */

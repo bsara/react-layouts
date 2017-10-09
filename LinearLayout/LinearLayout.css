@@ -21,12 +21,12 @@
   display:         flex;
   -ms-flex-wrap:       nowrap;
       flex-wrap:       nowrap;
-  -webkit-box-align:     var(--item-alignment, initial);
-      -ms-flex-align:     var(--item-alignment, initial);
-          align-items:     var(--item-alignment, initial);
-  -webkit-box-pack: var(--item-justification, flex-start);
-      -ms-flex-pack: var(--item-justification, flex-start);
-          justify-content: var(--item-justification, flex-start)
+  -webkit-box-pack: var(--item-halign, flex-start);
+      -ms-flex-pack: var(--item-halign, flex-start);
+          justify-content: var(--item-halign, flex-start);
+  -webkit-box-align:     var(--item-valign, initial);
+      -ms-flex-align:     var(--item-valign, initial);
+          align-items:     var(--item-valign, initial)
 }
 .rl-d8af8a4c > * {
   -webkit-box-flex:   var(--stretch-items, 0);
@@ -78,8 +78,8 @@
 .rl-d8af8a4c > * {/*stylelint-disable-line no-duplicate-selectors
  *//*Reset layout children custom props in case child is special layout
  */
-  --item-alignment:     initial;
-  --item-justification: initial
+  --item-halign: initial;
+  --item-valign: initial
 }
 .rl-d8af8a4c > * > * {/*Reset layout grandchildren custom props in case child is special layout
  */
