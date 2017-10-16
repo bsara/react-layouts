@@ -16,28 +16,25 @@
  * PERFORMANCE OF THIS SOFTWARE.
  */
 .rl-d8af8a4c {
-  display:         -webkit-box;
-  display:         -ms-flexbox;
-  display:         flex;
-  -ms-flex-wrap:       nowrap;
-      flex-wrap:       nowrap;
-  -webkit-box-pack: var(--item-halign, flex-start);
-      -ms-flex-pack: var(--item-halign, flex-start);
-          justify-content: var(--item-halign, flex-start);
-  -webkit-box-align:     var(--item-valign, initial);
-      -ms-flex-align:     var(--item-valign, initial);
-          align-items:     var(--item-valign, initial)
+  display:   -webkit-box;
+  display:   -ms-flexbox;
+  display:   flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap
 }
 .rl-d8af8a4c > * {
-  -webkit-box-flex:   var(--stretch-items, 0);
-      -ms-flex-positive:   var(--stretch-items, 0);
-          flex-grow:   var(--stretch-items, 0);
-  -ms-flex-negative: var(--shrink-items, 0);
-      flex-shrink: var(--shrink-items, 0);
-  -ms-flex-preferred-size:  var(--stretch-basis);
-      flex-basis:  var(--stretch-basis);
-  -webkit-box-sizing:  border-box;
-          box-sizing:  border-box;
+  -webkit-box-flex:    var(--stretch-items, 0);
+      -ms-flex-positive:    var(--stretch-items, 0);
+          flex-grow:    var(--stretch-items, 0);
+  -ms-flex-negative:  var(--shrink-items, 0);
+      flex-shrink:  var(--shrink-items, 0);
+  -ms-flex-preferred-size:   var(--stretch-basis);
+      flex-basis:   var(--stretch-basis);
+  justify-self: var(--item-halign, flex-start);
+  -ms-flex-item-align:   var(--item-valign, initial);
+      align-self:   var(--item-valign, initial);
+  -webkit-box-sizing:   border-box;
+          box-sizing:   border-box;
 }
 .rl-d8af8a4c.rl-c00799cd {
   -webkit-box-orient: horizontal;
@@ -78,8 +75,6 @@
 .rl-d8af8a4c > * {/*stylelint-disable-line no-duplicate-selectors
  *//*Reset layout children custom props in case child is special layout
  */
-  --item-halign: initial;
-  --item-valign: initial
 }
 .rl-d8af8a4c > * > * {/*Reset layout grandchildren custom props in case child is special layout
  */
@@ -88,6 +83,8 @@
   --stretch-basis: initial;
   --item-gap:       initial;
   --item-separator: initial;
+  --item-halign: initial;
+  --item-valign: initial;
   --item-size:     initial;
   --item-min-size: initial;
   --item-max-size: initial;

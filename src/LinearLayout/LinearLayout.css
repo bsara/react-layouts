@@ -16,17 +16,17 @@
  * PERFORMANCE OF THIS SOFTWARE.
  */
 .linear-layout {
-  display:         flex;
-  flex-wrap:       nowrap;
-  justify-content: var(--item-halign, flex-start);
-  align-items:     var(--item-valign, initial);
+  display:   flex;
+  flex-wrap: nowrap;
 
 
   & > * {
-    flex-grow:   var(--stretch-items, 0);
-    flex-shrink: var(--shrink-items, 0);
-    flex-basis:  var(--stretch-basis);
-    box-sizing:  border-box;
+    flex-grow:    var(--stretch-items, 0);
+    flex-shrink:  var(--shrink-items, 0);
+    flex-basis:   var(--stretch-basis);
+    justify-self: var(--item-halign, flex-start);
+    align-self:   var(--item-valign, initial);
+    box-sizing:   border-box;
   }
 
 
@@ -74,9 +74,6 @@
   & > * { /* stylelint-disable-line no-duplicate-selectors */
     /* Reset layout children custom props in case child is special layout */
 
-    --item-halign: initial;
-    --item-valign: initial;
-
     & > * {
       /* Reset layout grandchildren custom props in case child is special layout */
 
@@ -86,6 +83,9 @@
 
       --item-gap:       initial;
       --item-separator: initial;
+
+      --item-halign: initial;
+      --item-valign: initial;
 
       --item-size:     initial;
       --item-min-size: initial;
