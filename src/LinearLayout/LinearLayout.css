@@ -25,7 +25,7 @@
     flex-shrink:  var(--shrink-items, 0);
     flex-basis:   var(--stretch-basis);
     justify-self: var(--item-halign, flex-start);
-    align-self:   var(--item-valign, initial);
+    align-self:   var(--item-valign);
     box-sizing:   border-box;
   }
 
@@ -44,7 +44,7 @@
 
       &:not(:last-child) {
         margin-right: calc(var(--item-gap) / 2);
-        border-right: var(--item-separator, none);
+        border-right: var(--item-separator);
       }
     }
   }
@@ -64,7 +64,7 @@
 
       &:not(:last-child) {
         margin-bottom: calc(var(--item-gap) / 2);
-        border-bottom: var(--item-separator, none);
+        border-bottom: var(--item-separator);
       }
     }
   }
