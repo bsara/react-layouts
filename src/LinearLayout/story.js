@@ -50,7 +50,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Horizontal (Separator)', () => (
-    <LinearLayout direction="horizontal" className="_separator" style={contrastStyles}>
+    <LinearLayout direction="horizontal" styleName="_separator" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -66,7 +66,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Vertical (Tall)', () => (
-    <LinearLayout direction="vertical" className="_tall" style={contrastStyles}>
+    <LinearLayout direction="vertical" styleName="_tall" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -74,7 +74,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Vertical (Separator)', () => (
-    <LinearLayout direction="vertical" className="_separator" style={contrastStyles}>
+    <LinearLayout direction="vertical" styleName="_separator" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -82,7 +82,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Vertical (Separator - Tall)', () => (
-    <LinearLayout direction="vertical" className="_separator _tall" style={contrastStyles}>
+    <LinearLayout direction="vertical" styleName="_separator _tall" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -90,7 +90,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Alignment (Start)', () => (
-    <LinearLayout className="_align-items-start" style={contrastStyles}>
+    <LinearLayout styleName="_align-items-start" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -98,7 +98,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Alignment (End)', () => (
-    <LinearLayout className="_align-items-end" style={contrastStyles}>
+    <LinearLayout styleName="_align-items-end" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -106,7 +106,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Alignment (Center)', () => (
-    <LinearLayout className="_align-items-center" style={contrastStyles}>
+    <LinearLayout styleName="_align-items-center" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -114,7 +114,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Stretch Items (Horiz.)', () => (
-    <LinearLayout className="_stretch-items" style={contrastStyles}>
+    <LinearLayout styleName="_stretch-items" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -122,7 +122,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Stretch Items (Horiz. w/Separator)', () => (
-    <LinearLayout className="_stretch-items _separator" style={contrastStyles}>
+    <LinearLayout styleName="_stretch-items _separator" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -130,7 +130,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Stretch Items (Vert.)', () => (
-    <LinearLayout className="_stretch-items" direction="vert" style={contrastStyles}>
+    <LinearLayout styleName="_stretch-items" direction="vert" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -138,7 +138,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Stretch Items (Vert. w/Separator)', () => (
-    <LinearLayout className="_stretch-items _separator" direction="v" style={contrastStyles}>
+    <LinearLayout styleName="_stretch-items _separator" direction="v" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -146,7 +146,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Stretch Items (Vert. w/Separator - Tall)', () => (
-    <LinearLayout className="_stretch-items _separator _tall" direction="v" style={contrastStyles}>
+    <LinearLayout styleName="_stretch-items _separator _tall" direction="v" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -154,7 +154,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Size (Horiz. w/Separator)', () => (
-    <LinearLayout className="_item-size _separator" style={contrastStyles}>
+    <LinearLayout styleName="_item-size _separator" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -162,7 +162,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Size (Vert. w/Separator)', () => (
-    <LinearLayout className="_item-size _separator" direction="v" style={contrastStyles}>
+    <LinearLayout styleName="_item-size _separator" direction="v" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -170,7 +170,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Min Size (Horiz. w/Separator)', () => (
-    <LinearLayout className="_item-min-size _separator" style={contrastStyles}>
+    <LinearLayout styleName="_item-min-size _separator" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -178,7 +178,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Min Size (Vert. w/Separator)', () => (
-    <LinearLayout className="_item-min-size _separator" direction="v" style={contrastStyles}>
+    <LinearLayout styleName="_item-min-size _separator" direction="v" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -186,7 +186,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Max Size (Horiz. w/Separator)', () => (
-    <LinearLayout className="_item-max-size _separator" style={contrastStyles}>
+    <LinearLayout styleName="_item-max-size _separator" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>
@@ -194,7 +194,7 @@ storiesOf('LinearLayout', module)
     </LinearLayout>
   ))
   .add('Item Max Size (Vert. w/Separator)', () => (
-    <LinearLayout className="_item-max-size _separator" direction="v" style={contrastStyles}>
+    <LinearLayout styleName="_item-max-size _separator" direction="v" style={contrastStyles}>
       <div>Item 1</div>
       <div>Item 2</div>
       <div>Item 3</div>

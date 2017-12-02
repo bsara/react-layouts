@@ -57,7 +57,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Column Count (4)', () => (
-    <GridLayout className="_column-count" style={contrastStyles}>
+    <GridLayout styleName="_column-count" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -80,7 +80,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Column Count (4 w/Gap)', () => (
-    <GridLayout className="_column-count _gap" style={contrastStyles}>
+    <GridLayout styleName="_column-count _gap" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -103,7 +103,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Row Count (4)', () => (
-    <GridLayout className="_row-count" style={contrastStyles}>
+    <GridLayout styleName="_row-count" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -126,7 +126,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Row Count (4 w/Gap)', () => (
-    <GridLayout className="_row-count _gap" style={contrastStyles}>
+    <GridLayout styleName="_row-count _gap" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -149,7 +149,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Areas Template', () => (
-    <GridLayout className="_areas-template" style={contrastStyles}>
+    <GridLayout styleName="_areas-template" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -172,7 +172,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Columns Template', () => (
-    <GridLayout className="_columns-template" style={contrastStyles}>
+    <GridLayout styleName="_columns-template" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2 blahblahblah</div>
       <div>Item 1.3</div>
@@ -195,7 +195,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Rows Template', () => (
-    <GridLayout className="_rows-template" style={contrastStyles}>
+    <GridLayout styleName="_rows-template" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -218,7 +218,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Item Size (Column Count)', () => (
-    <GridLayout className="_item-size _column-count" style={contrastStyles}>
+    <GridLayout styleName="_item-size _column-count" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>
@@ -241,7 +241,7 @@ storiesOf('GridLayout', module)
     </GridLayout>
   ))
   .add('Item Size (Row Count)', () => (
-    <GridLayout className="_item-size _row-count" style={contrastStyles}>
+    <GridLayout styleName="_item-size _row-count" style={contrastStyles}>
       <div>Item 1.1</div>
       <div>Item 1.2</div>
       <div>Item 1.3</div>

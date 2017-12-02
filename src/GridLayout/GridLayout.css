@@ -18,28 +18,19 @@
 .grid-layout {
   display: grid;
 
-  grid-template-columns: var(--columns-template, repeat(
-                           var(--column-count, 0),
-                           minmax(
-                             var(--item-min-width, var(--item-min-size, 0)),
-                             var(--item-width, var(--item-size, var(--item-max-width, var(--item-max-size, 1fr))))
-                           )
+  grid-template-columns: repeat(var(--grid-column-count, 0), minmax(
+                           var(--grid-item-min-width, var(--grid-item-min-size, 0)),
+                           var(--grid-item-width, var(--grid-item-size, var(--grid-item-max-width, var(--grid-item-max-size, 1fr))))
                          ));
-  grid-template-rows:  var(--rows-template, repeat(
-                         var(--row-count, 0),
-                         minmax(
-                           var(--item-min-height, var(--item-min-size, 0)),
-                           var(--item-height, var(--item-size, var(--item-max-height, var(--item-max-size, 1fr))))
-                         )
+  grid-template-rows:  repeat(var(--grid-row-count, 0), minmax(
+                         var(--grid-item-min-height, var(--grid-item-min-size, 0)),
+                         var(--grid-item-height, var(--grid-item-size, var(--grid-item-max-height, var(--grid-item-max-size, 1fr))))
                        ));
-  grid-template-areas: var(--areas-template);
-  grid-gap:            var(--item-gap);
 
 
   & > * {
-    grid-row:    var(--row, var(--area, span var(--row-span, 1)));
-    grid-column: var(--column, var(--area, span var(--column-span, 1)));
-    grid-area:   var(--area);
+    grid-row:    span var(--grid-row-span);
+    grid-column: span var(--grid-column-span);
     box-sizing:  border-box;
   }
 
@@ -48,36 +39,26 @@
   & > * {
     /* Reset layout children custom props in case child is special layout */
 
-    --rows-template:    initial;
-    --columns-template: initial;
-    --areas-template:   initial;
-
-    --row-count:    initial;
-    --column-count: initial;
-
-    --item-gap: initial;
+    --grid-row-count:    initial;
+    --grid-column-count: initial;
 
     & > * {
       /* Reset layout grandchildren custom props in case child is special layout */
 
-      --row:    initial;
-      --column: initial;
-      --area:   initial;
+      --grid-row-span:    initial;
+      --grid-column-span: initial;
 
-      --row-span:    initial;
-      --column-span: initial;
+      --grid-item-size:     initial;
+      --grid-item-min-size: initial;
+      --grid-item-max-size: initial;
 
-      --item-size:     initial;
-      --item-min-size: initial;
-      --item-max-size: initial;
+      --grid-item-width:     initial;
+      --grid-item-min-width: initial;
+      --grid-item-max-width: initial;
 
-      --item-width:     initial;
-      --item-min-width: initial;
-      --item-max-width: initial;
-
-      --item-height:     initial;
-      --item-min-height: initial;
-      --item-max-height: initial;
+      --grid-item-height:     initial;
+      --grid-item-min-height: initial;
+      --grid-item-max-height: initial;
     }
   }
 }

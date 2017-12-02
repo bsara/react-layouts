@@ -17,35 +17,56 @@
  */
 
 ._gap {
-  --item-gap: 10px;
+  /* grid-gap: 10px; */
 }
 
 
 
 ._column-count {
-  --column-count: 4;
+  --grid-column-count: 4;
 }
 
 ._row-count {
-  --row-count: 4;
+  --grid-row-count: 4;
 }
 
 
 
 ._areas-template {
-  /* TODO */
+  grid-template-areas: "three-one   one-one   four-one   two-one"
+                       "three-two   one-two   four-two   two-two"
+                       "three-three one-three four-three two-three"
+                       "three-four  one-four  four-four  two-four";
 }
 
+._areas-template > *:first-child   { grid-area: one-one; }
+._areas-template > *:nth-child(2)  { grid-area: one-two; }
+._areas-template > *:nth-child(3)  { grid-area: one-three; }
+._areas-template > *:nth-child(4)  { grid-area: one-four; }
+._areas-template > *:nth-child(5)  { grid-area: two-one; }
+._areas-template > *:nth-child(6)  { grid-area: two-two; }
+._areas-template > *:nth-child(7)  { grid-area: two-three; }
+._areas-template > *:nth-child(8)  { grid-area: two-four; }
+._areas-template > *:nth-child(9)  { grid-area: three-one; }
+._areas-template > *:nth-child(10) { grid-area: three-two; }
+._areas-template > *:nth-child(11) { grid-area: three-three; }
+._areas-template > *:nth-child(12) { grid-area: three-four; }
+._areas-template > *:nth-child(13) { grid-area: four-one; }
+._areas-template > *:nth-child(14) { grid-area: four-two; }
+._areas-template > *:nth-child(15) { grid-area: four-three; }
+._areas-template > *:last-child    { grid-area: four-four; }
+
+
 ._columns-template {
-  --columns-template: minmax(max-content, 50fr) minmax(min-content, 75fr) minmax(min-content, 35fr) minmax(min-content, 10fr);
+  grid-template-columns: minmax(max-content, 50fr) minmax(min-content, 75fr) minmax(min-content, 35fr) minmax(min-content, 10fr);
 }
 
 ._rows-template {
-  --rows-template: repeat(4, 50px);
+  grid-template-rows: repeat(4, 50px);
 }
 
 
 
 ._item-size {
-  --item-size: 100px;
+  --grid-item-size: 100px;
 }
