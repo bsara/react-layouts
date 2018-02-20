@@ -27,8 +27,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _styleModuleImportMap = {
   './LinearLayout.css': {
     'linear-layout': 'rl-d8af8a4c',
-    'horizontal': 'rl-c00799cd',
-    'vertical': 'rl-ce2602cf'
+    'linear-layout-horizontal': 'rl-b6ac2d51',
+    'linear-layout-vertical': 'rl-f1eedeb0'
   }
 };
 
@@ -40,7 +40,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /**
  * ISC License (ISC)
  *
- * Copyright (c) 2017, Brandon D. Sara (https://bsara.pro/)
+ * Copyright (c) 2018, Brandon D. Sara (https://bsara.pro/)
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -83,7 +83,7 @@ var LinearLayout = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        _extends({}, elementProps, { ref: domRef, className: (className ? className + ' ' : '') + (0, _getClassName3.default)('linear-layout ' + (isDirectionVertical ? 'vertical' : 'horizontal'), _styleModuleImportMap)
+        _extends({}, elementProps, { ref: domRef, className: (className ? className + ' ' : '') + (0, _getClassName3.default)('linear-layout ' + (isDirectionVertical ? 'linear-layout-vertical' : 'linear-layout-horizontal'), _styleModuleImportMap)
         }),
         children
       );

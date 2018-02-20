@@ -2,7 +2,7 @@
 /**
  * ISC License (ISC)
  *
- * Copyright (c) 2017, Brandon D. Sara (https://bsara.pro/)
+ * Copyright (c) 2018, Brandon D. Sara (https://bsara.pro/)
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -41,7 +41,7 @@ export default class LinearLayout extends React.Component {
     const isDirectionVertical = (direction === 'v' || direction === 'vert' || direction === 'vertical');
 
     return (
-      <div {...elementProps} styleName={`linear-layout ${isDirectionVertical ? 'vertical' : 'horizontal'}`} className={className} ref={domRef}>
+      <div {...elementProps} styleName={`linear-layout ${isDirectionVertical ? 'linear-layout-vertical' : 'linear-layout-horizontal'}`} className={className} ref={domRef}>
         {children}
       </div>
     );

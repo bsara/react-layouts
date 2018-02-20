@@ -16,6 +16,7 @@ module.exports = {
       }
     }),
 
-    require('autoprefixer')
+    require('autoprefixer'),
+    require('postcss-discard-comments')
   ]
 };

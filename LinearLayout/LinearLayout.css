@@ -1,7 +1,7 @@
-/**
+/*!
  * ISC License (ISC)
  *
- * Copyright (c) 2017, Brandon D. Sara (https://bsara.pro/)
+ * Copyright (c) 2018, Brandon D. Sara (https://bsara.pro/)
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -15,79 +15,98 @@
  * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  */
-.rl-d8af8a4c {
-  display:   -webkit-box;
-  display:   -ms-flexbox;
-  display:   flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap
+.rl-d8af8a4c{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:nowrap;
+      flex-wrap:nowrap
 }
-.rl-d8af8a4c > * {
-  -webkit-box-flex:    var(--stretch-items, 0);
-      -ms-flex-positive:    var(--stretch-items, 0);
-          flex-grow:    var(--stretch-items, 0);
-  -ms-flex-negative:  var(--shrink-items, 0);
-      flex-shrink:  var(--shrink-items, 0);
-  -ms-flex-preferred-size:   var(--stretch-basis);
-      flex-basis:   var(--stretch-basis);
-  justify-self: var(--item-halign, flex-start);
-  -ms-flex-item-align:   var(--item-valign);
-      align-self:   var(--item-valign);
-  -webkit-box-sizing:   border-box;
-          box-sizing:   border-box;
+.rl-d8af8a4c > *{
+  -webkit-box-flex:var(--stretch-items, 0);
+      -ms-flex-positive:var(--stretch-items, 0);
+          flex-grow:var(--stretch-items, 0);
+  -ms-flex-negative:var(--shrink-items, 0);
+      flex-shrink:var(--shrink-items, 0);
+  -ms-flex-preferred-size:var(--stretch-basis);
+      flex-basis:var(--stretch-basis);
+  justify-self:var(--item-halign, flex-start);
+  -ms-flex-item-align:var(--item-valign);
+      align-self:var(--item-valign);
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
 }
-.rl-d8af8a4c.rl-c00799cd {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row
+
+
+.rl-b6ac2d51{
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:row;
+          flex-direction:row
 }
-.rl-d8af8a4c.rl-c00799cd > * {
-  width:     var(--item-size);
-  min-width: var(--item-min-size);
-  max-width: var(--item-max-size)
+
+
+.rl-b6ac2d51 > *{
+  width:var(--item-size);
+  min-width:var(--item-min-size);
+  max-width:var(--item-max-size)
 }
-.rl-d8af8a4c.rl-c00799cd > *:not(:first-child) {
-  margin-left: calc(var(--item-gap) / 2);
+
+
+.rl-b6ac2d51 > *:not(:first-child){
+  margin-left:calc(var(--item-gap) / 2);
 }
-.rl-d8af8a4c.rl-c00799cd > *:not(:last-child) {
-  margin-right: calc(var(--item-gap) / 2);
-  border-right: var(--item-separator);
+
+
+.rl-b6ac2d51 > *:not(:last-child){
+  margin-right:calc(var(--item-gap) / 2);
+  border-right:var(--item-separator);
 }
-.rl-d8af8a4c.rl-ce2602cf {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column
+
+
+.rl-f1eedeb0{
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column
 }
-.rl-d8af8a4c.rl-ce2602cf > * {
-  height:     var(--item-size);
-  min-height: var(--item-min-size);
-  max-height: var(--item-max-size)
+
+
+.rl-f1eedeb0 > *{
+  height:var(--item-size);
+  min-height:var(--item-min-size);
+  max-height:var(--item-max-size)
 }
-.rl-d8af8a4c.rl-ce2602cf > *:not(:first-child) {
-  margin-top: calc(var(--item-gap) / 2);
+
+
+.rl-f1eedeb0 > *:not(:first-child){
+  margin-top:calc(var(--item-gap) / 2);
 }
-.rl-d8af8a4c.rl-ce2602cf > *:not(:last-child) {
-  margin-bottom: calc(var(--item-gap) / 2);
-  border-bottom: var(--item-separator);
+
+
+.rl-f1eedeb0 > *:not(:last-child){
+  margin-bottom:calc(var(--item-gap) / 2);
+  border-bottom:var(--item-separator);
 }
-.rl-d8af8a4c > * {/*stylelint-disable-line no-duplicate-selectors
- *//*Reset layout children custom props in case child is special layout
- */
+
+
+
+.rl-d8af8a4c > *{
 }
-.rl-d8af8a4c > * > * {/*Reset layout grandchildren custom props in case child is special layout
- */
-  --stretch-items: initial;
-  --shrink-items:  initial;
-  --stretch-basis: initial;
-  --item-gap:       initial;
-  --item-separator: initial;
-  --item-halign: initial;
-  --item-valign: initial;
-  --item-size:     initial;
-  --item-min-size: initial;
-  --item-max-size: initial;
+
+
+
+.rl-d8af8a4c > * > *{
+  --stretch-items:initial;
+  --shrink-items:initial;
+  --stretch-basis:initial;
+  --item-gap:initial;
+  --item-separator:initial;
+  --item-halign:initial;
+  --item-valign:initial;
+  --item-size:initial;
+  --item-min-size:initial;
+  --item-max-size:initial;
 }
 
 /*# sourceMappingURL=LinearLayout.css.map */

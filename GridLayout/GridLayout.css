@@ -1,7 +1,7 @@
-/**
+/*!
  * ISC License (ISC)
  *
- * Copyright (c) 2017, Brandon D. Sara (https://bsara.pro/)
+ * Copyright (c) 2018, Brandon D. Sara (https://bsara.pro/)
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -15,42 +15,40 @@
  * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  */
-.rl-aef45beb {
-  display: grid;
+.rl-aef45beb{
+  display:grid;
 
-  grid-template-columns: repeat(var(--grid-column-count, 0), minmax(
+  grid-template-columns:repeat(var(--grid-column-count, 0), minmax(
                            var(--grid-item-min-width, var(--grid-item-min-size, 0)),
                            var(--grid-item-width, var(--grid-item-size, var(--grid-item-max-width, var(--grid-item-max-size, 1fr))))
                          ));
-  grid-template-rows:  repeat(var(--grid-row-count, 0), minmax(
+  grid-template-rows:repeat(var(--grid-row-count, 0), minmax(
                          var(--grid-item-min-height, var(--grid-item-min-size, 0)),
                          var(--grid-item-height, var(--grid-item-size, var(--grid-item-max-height, var(--grid-item-max-size, 1fr))))
                        ))
 }
-.rl-aef45beb > * {
-  grid-row:    span var(--grid-row-span);
-  grid-column: span var(--grid-column-span);
-  -webkit-box-sizing:  border-box;
-          box-sizing:  border-box;
+.rl-aef45beb > *{
+  grid-row:span var(--grid-row-span);
+  grid-column:span var(--grid-column-span);
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
 }
-.rl-aef45beb > * {/*Reset layout children custom props in case child is special layout
- */
-  --grid-row-count:    initial;
-  --grid-column-count: initial
+.rl-aef45beb > *{
+  --grid-row-count:initial;
+  --grid-column-count:initial
 }
-.rl-aef45beb > * > * {/*Reset layout grandchildren custom props in case child is special layout
- */
-  --grid-row-span:    initial;
-  --grid-column-span: initial;
-  --grid-item-size:     initial;
-  --grid-item-min-size: initial;
-  --grid-item-max-size: initial;
-  --grid-item-width:     initial;
-  --grid-item-min-width: initial;
-  --grid-item-max-width: initial;
-  --grid-item-height:     initial;
-  --grid-item-min-height: initial;
-  --grid-item-max-height: initial;
+.rl-aef45beb > * > *{
+  --grid-row-span:initial;
+  --grid-column-span:initial;
+  --grid-item-size:initial;
+  --grid-item-min-size:initial;
+  --grid-item-max-size:initial;
+  --grid-item-width:initial;
+  --grid-item-min-width:initial;
+  --grid-item-max-width:initial;
+  --grid-item-height:initial;
+  --grid-item-min-height:initial;
+  --grid-item-max-height:initial;
 }
 
 /*# sourceMappingURL=GridLayout.css.map */

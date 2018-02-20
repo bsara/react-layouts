@@ -37,7 +37,7 @@ import LinearLayout from '@bsara/react-layouts/LinearLayout';
 
 ISC License (ISC)
 
-Copyright (c) 2017, Brandon D. Sara (http://bsara.pro/)
+Copyright (c) 2018, Brandon D. Sara (http://bsara.pro/)
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
