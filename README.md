@@ -1,4 +1,4 @@
-# react-layouts [![NPM Package](https://img.shields.io/npm/v/@bsara/react-layouts.svg?style=flat-square)][npm]
+# @bsara/react-layouts [![NPM Package](https://img.shields.io/npm/v/@bsara/react-layouts.svg?style=flat-square)][npm]
 
 [![ISC License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)][license]
 
