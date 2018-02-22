@@ -71,38 +71,33 @@
 
 
 
-.linear-layout > * { /* stylelint-disable-line no-duplicate-selectors */
-  /* Reset layout children custom props in case child is special layout */
+.linear-layout {
+  --linear-layout-stretch-items:       unset;
+  --linear-layout-shrink-items:        unset;
+  --linear-layout-stretch-items-basis: unset;
 
-  --linear-layout-stretch-items: initial;
-  --linear-layout-shrink-items:  initial;
-  --linear-layout-stretch-items-basis: initial;
+  --linear-layout-items-gap:       unset;
+  --linear-layout-items-separator: unset;
 
-  --linear-layout-items-gap: initial;
-  --linear-layout-items-separator: initial;
+  --linear-layout-halign-items: unset;
+  --linear-layout-valign-items: unset;
 
-  --linear-layout-halign-items: initial;
-  --linear-layout-valign-items: initial;
+  --linear-layout-items-size:     unset;
+  --linear-layout-items-min-size: unset;
+  --linear-layout-items-max-size: unset;
 
-  --linear-layout-items-size:     initial;
-  --linear-layout-items-min-size: initial;
-  --linear-layout-items-max-size: initial;
 
-  & > * {
-    /* Reset layout grandchildren custom props in case child is special layout */
+  --linear-layout-stretch-self:       unset;
+  --linear-layout-shrink-self:        unset;
+  --linear-layout-stretch-self-basis: unset;
 
-    --linear-layout-stretch-self: initial;
-    --linear-layout-shrink-self:  initial;
-    --linear-layout-stretch-self-basis: initial;
+  --linear-layout-self-margin:    unset;
+  --linear-layout-self-separator: unset;
 
-    --linear-layout-self-margin:    initial;
-    --linear-layout-self-separator: initial;
+  --linear-layout-halign-self: unset;
+  --linear-layout-valign-self: unset;
 
-    --linear-layout-halign-self: initial;
-    --linear-layout-valign-self: initial;
-
-    --linear-layout-self-size:     initial;
-    --linear-layout-self-min-size: initial;
-    --linear-layout-self-max-size: initial;
-  }
+  --linear-layout-self-size:     unset;
+  --linear-layout-self-min-size: unset;
+  --linear-layout-self-max-size: unset;
 }
