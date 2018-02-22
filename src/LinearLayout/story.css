@@ -23,40 +23,40 @@
 
 
 ._separator {
-  --item-separator: 1px solid red;
+  --linear-layout-items-separator: 1px solid red;
 }
 
 
 
 ._align-items-start {
-  --item-alignment: start;
+  --linear-layout-halign-items: start;
 }
 
 ._align-items-end {
-  --item-alignment: end;
+  --linear-layout-halign-items: end;
 }
 
 ._align-items-center {
-  --item-alignment: center;
+  --linear-layout-halign-items: center;
 }
 
 
 
 ._stretch-items {
-  --stretch-items: 1;
+  --linear-layout-stretch-items: 1;
 }
 
 
 
 
 ._item-size {
-  --item-size: 30px;
+  --linear-layout-items-size: 30px;
 }
 
 ._item-min-size {
-  --item-min-size: 100px;
+  --linear-layout-items-min-size: 100px;
 }
 
 ._item-max-size {
-  --item-max-size: 10px;
+  --linear-layout-items-max-size: 10px;
 }

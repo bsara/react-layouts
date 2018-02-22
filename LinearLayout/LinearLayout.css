@@ -23,16 +23,16 @@
       flex-wrap:nowrap
 }
 .rl-d8af8a4c > *{
-  -webkit-box-flex:var(--stretch-items, 0);
-      -ms-flex-positive:var(--stretch-items, 0);
-          flex-grow:var(--stretch-items, 0);
-  -ms-flex-negative:var(--shrink-items, 0);
-      flex-shrink:var(--shrink-items, 0);
-  -ms-flex-preferred-size:var(--stretch-basis);
-      flex-basis:var(--stretch-basis);
-  justify-self:var(--item-halign, flex-start);
-  -ms-flex-item-align:var(--item-valign);
-      align-self:var(--item-valign);
+  -webkit-box-flex:var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
+      -ms-flex-positive:var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
+          flex-grow:var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
+  -ms-flex-negative:var(--linear-layout-shrink-self, var(--linear-layout-shrink-items, 0));
+      flex-shrink:var(--linear-layout-shrink-self, var(--linear-layout-shrink-items, 0));
+  -ms-flex-preferred-size:var(--linear-layout-stretch-self-basis, var(--linear-layout-stretch-items-basis));
+      flex-basis:var(--linear-layout-stretch-self-basis, var(--linear-layout-stretch-items-basis));
+  justify-self:var(--linear-layout-halign-self, var(--linear-layout-halign-items, flex-start));
+  -ms-flex-item-align:var(--linear-layout-valign-self, var(--linear-layout-valign-items));
+      align-self:var(--linear-layout-valign-self, var(--linear-layout-valign-items));
   -webkit-box-sizing:border-box;
           box-sizing:border-box;
 }
@@ -47,20 +47,20 @@
 
 
 .rl-b6ac2d51 > *{
-  width:var(--item-size);
-  min-width:var(--item-min-size);
-  max-width:var(--item-max-size)
+  width:var(--linear-layout-self-size, var(--linear-layout-items-size));
+  min-width:var(--linear-layout-self-min-size, var(--linear-layout-items-min-size));
+  max-width:var(--linear-layout-self-max-size, var(--linear-layout-items-max-size))
 }
 
 
 .rl-b6ac2d51 > *:not(:first-child){
-  margin-left:calc(var(--item-gap) / 2);
+  margin-left:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
 }
 
 
 .rl-b6ac2d51 > *:not(:last-child){
-  margin-right:calc(var(--item-gap) / 2);
-  border-right:var(--item-separator);
+  margin-right:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
+  border-right:var(--linear-layout-self-separator, var(--linear-layout-items-separator));
 }
 
 
@@ -73,40 +73,54 @@
 
 
 .rl-f1eedeb0 > *{
-  height:var(--item-size);
-  min-height:var(--item-min-size);
-  max-height:var(--item-max-size)
+  height:var(--linear-layout-self-size, var(--linear-layout-items-size));
+  min-height:var(--linear-layout-self-min-size, var(--linear-layout-items-min-size));
+  max-height:var(--linear-layout-self-max-size, var(--linear-layout-items-max-size))
 }
 
 
 .rl-f1eedeb0 > *:not(:first-child){
-  margin-top:calc(var(--item-gap) / 2);
+  margin-top:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
 }
 
 
 .rl-f1eedeb0 > *:not(:last-child){
-  margin-bottom:calc(var(--item-gap) / 2);
-  border-bottom:var(--item-separator);
+  margin-bottom:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
+  border-bottom:var(--linear-layout-self-separator, var(--linear-layout-items-separator));
 }
 
 
 
 .rl-d8af8a4c > *{
+
+  --linear-layout-stretch-items:initial;
+  --linear-layout-shrink-items:initial;
+  --linear-layout-stretch-items-basis:initial;
+
+  --linear-layout-items-gap:initial;
+  --linear-layout-items-separator:initial;
+
+  --linear-layout-halign-items:initial;
+  --linear-layout-valign-items:initial;
+
+  --linear-layout-items-size:initial;
+  --linear-layout-items-min-size:initial;
+  --linear-layout-items-max-size:initial
 }
 
 
 
 .rl-d8af8a4c > * > *{
-  --stretch-items:initial;
-  --shrink-items:initial;
-  --stretch-basis:initial;
-  --item-gap:initial;
-  --item-separator:initial;
-  --item-halign:initial;
-  --item-valign:initial;
-  --item-size:initial;
-  --item-min-size:initial;
-  --item-max-size:initial;
+  --linear-layout-stretch-self:initial;
+  --linear-layout-shrink-self:initial;
+  --linear-layout-stretch-self-basis:initial;
+  --linear-layout-self-margin:initial;
+  --linear-layout-self-separator:initial;
+  --linear-layout-halign-self:initial;
+  --linear-layout-valign-self:initial;
+  --linear-layout-self-size:initial;
+  --linear-layout-self-min-size:initial;
+  --linear-layout-self-max-size:initial;
 }
 
 /*# sourceMappingURL=LinearLayout.css.map */

@@ -20,11 +20,11 @@
   flex-wrap: nowrap;
 
   & > * {
-    flex-grow:    var(--stretch-items, 0);
-    flex-shrink:  var(--shrink-items, 0);
-    flex-basis:   var(--stretch-basis);
-    justify-self: var(--item-halign, flex-start);
-    align-self:   var(--item-valign);
+    flex-grow:    var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
+    flex-shrink:  var(--linear-layout-shrink-self, var(--linear-layout-shrink-items, 0));
+    flex-basis:   var(--linear-layout-stretch-self-basis, var(--linear-layout-stretch-items-basis));
+    justify-self: var(--linear-layout-halign-self, var(--linear-layout-halign-items, flex-start));
+    align-self:   var(--linear-layout-valign-self, var(--linear-layout-valign-items));
     box-sizing:   border-box;
   }
 }
@@ -34,17 +34,17 @@
   flex-direction: row;
 
   & > * {
-    width:     var(--item-size);
-    min-width: var(--item-min-size);
-    max-width: var(--item-max-size);
+    width:     var(--linear-layout-self-size, var(--linear-layout-items-size));
+    min-width: var(--linear-layout-self-min-size, var(--linear-layout-items-min-size));
+    max-width: var(--linear-layout-self-max-size, var(--linear-layout-items-max-size));
 
     &:not(:first-child) {
-      margin-left: calc(var(--item-gap) / 2);
+      margin-left: calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
     }
 
     &:not(:last-child) {
-      margin-right: calc(var(--item-gap) / 2);
-      border-right: var(--item-separator);
+      margin-right: calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
+      border-right: var(--linear-layout-self-separator, var(--linear-layout-items-separator));
     }
   }
 }
@@ -54,17 +54,17 @@
   flex-direction: column;
 
   & > * {
-    height:     var(--item-size);
-    min-height: var(--item-min-size);
-    max-height: var(--item-max-size);
+    height:     var(--linear-layout-self-size, var(--linear-layout-items-size));
+    min-height: var(--linear-layout-self-min-size, var(--linear-layout-items-min-size));
+    max-height: var(--linear-layout-self-max-size, var(--linear-layout-items-max-size));
 
     &:not(:first-child) {
-      margin-top: calc(var(--item-gap) / 2);
+      margin-top: calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
     }
 
     &:not(:last-child) {
-      margin-bottom: calc(var(--item-gap) / 2);
-      border-bottom: var(--item-separator);
+      margin-bottom: calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
+      border-bottom: var(--linear-layout-self-separator, var(--linear-layout-items-separator));
     }
   }
 }
@@ -74,21 +74,35 @@
 .linear-layout > * { /* stylelint-disable-line no-duplicate-selectors */
   /* Reset layout children custom props in case child is special layout */
 
+  --linear-layout-stretch-items: initial;
+  --linear-layout-shrink-items:  initial;
+  --linear-layout-stretch-items-basis: initial;
+
+  --linear-layout-items-gap: initial;
+  --linear-layout-items-separator: initial;
+
+  --linear-layout-halign-items: initial;
+  --linear-layout-valign-items: initial;
+
+  --linear-layout-items-size:     initial;
+  --linear-layout-items-min-size: initial;
+  --linear-layout-items-max-size: initial;
+
   & > * {
     /* Reset layout grandchildren custom props in case child is special layout */
 
-    --stretch-items: initial;
-    --shrink-items:  initial;
-    --stretch-basis: initial;
+    --linear-layout-stretch-self: initial;
+    --linear-layout-shrink-self:  initial;
+    --linear-layout-stretch-self-basis: initial;
 
-    --item-gap:       initial;
-    --item-separator: initial;
+    --linear-layout-self-margin:    initial;
+    --linear-layout-self-separator: initial;
 
-    --item-halign: initial;
-    --item-valign: initial;
+    --linear-layout-halign-self: initial;
+    --linear-layout-valign-self: initial;
 
-    --item-size:     initial;
-    --item-min-size: initial;
-    --item-max-size: initial;
+    --linear-layout-self-size:     initial;
+    --linear-layout-self-min-size: initial;
+    --linear-layout-self-max-size: initial;
   }
 }
