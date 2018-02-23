@@ -91,7 +91,21 @@
 
 
 
-.rl-d8af8a4c > *{
+.rl-d8af8a4c{
+  --linear-layout-stretch-items:unset;
+  --linear-layout-shrink-items:unset;
+  --linear-layout-stretch-items-basis:unset;
+
+  --linear-layout-items-gap:unset;
+  --linear-layout-items-separator:unset;
+
+  --linear-layout-halign-items:unset;
+  --linear-layout-valign-items:unset;
+
+  --linear-layout-items-size:unset;
+  --linear-layout-items-min-size:unset;
+  --linear-layout-items-max-size:unset;
+
 
   --linear-layout-stretch-self:unset;
   --linear-layout-shrink-self:unset;
@@ -105,22 +119,7 @@
 
   --linear-layout-self-size:unset;
   --linear-layout-self-min-size:unset;
-  --linear-layout-self-max-size:unset
-}
-
-
-
-.rl-d8af8a4c > * > *{
-  --linear-layout-stretch-items:unset;
-  --linear-layout-shrink-items:unset;
-  --linear-layout-stretch-items-basis:unset;
-  --linear-layout-items-gap:unset;
-  --linear-layout-items-separator:unset;
-  --linear-layout-halign-items:unset;
-  --linear-layout-valign-items:unset;
-  --linear-layout-items-size:unset;
-  --linear-layout-items-min-size:unset;
-  --linear-layout-items-max-size:unset;
+  --linear-layout-self-max-size:unset;
 }
 
 /*# sourceMappingURL=LinearLayout.css.map */
