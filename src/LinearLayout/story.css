@@ -23,21 +23,21 @@
 
 
 ._separator {
-  --linear-layout-items-separator: 1px solid red;
+  --linear-layout-item-separator: 1px solid red;
 }
 
 
 
 ._align-items-start {
-  --linear-layout-halign-items: start;
+  --linear-layout-halign-item: start;
 }
 
 ._align-items-end {
-  --linear-layout-halign-items: end;
+  --linear-layout-halign-item: end;
 }
 
 ._align-items-center {
-  --linear-layout-halign-items: center;
+  --linear-layout-halign-item: center;
 }
 
 
@@ -50,13 +50,13 @@
 
 
 ._item-size {
-  --linear-layout-items-size: 30px;
+  --linear-layout-item-size: 30px;
 }
 
 ._item-min-size {
-  --linear-layout-items-min-size: 100px;
+  --linear-layout-item-min-size: 100px;
 }
 
 ._item-max-size {
-  --linear-layout-items-max-size: 10px;
+  --linear-layout-item-max-size: 10px;
 }
