@@ -23,16 +23,16 @@
       flex-wrap:nowrap
 }
 .rl-d8af8a4c > *{
-  -webkit-box-flex:var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
-      -ms-flex-positive:var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
-          flex-grow:var(--linear-layout-shrink-self, var(--linear-layout-stretch-items, 0));
-  -ms-flex-negative:var(--linear-layout-shrink-self, var(--linear-layout-shrink-items, 0));
-      flex-shrink:var(--linear-layout-shrink-self, var(--linear-layout-shrink-items, 0));
-  -ms-flex-preferred-size:var(--linear-layout-stretch-self-basis, var(--linear-layout-stretch-items-basis));
-      flex-basis:var(--linear-layout-stretch-self-basis, var(--linear-layout-stretch-items-basis));
-  justify-self:var(--linear-layout-halign-self, var(--linear-layout-halign-items, flex-start));
-  -ms-flex-item-align:var(--linear-layout-valign-self, var(--linear-layout-valign-items));
-      align-self:var(--linear-layout-valign-self, var(--linear-layout-valign-items));
+  -webkit-box-flex:var(--linear-layout-stretch-items, 0);
+      -ms-flex-positive:var(--linear-layout-stretch-items, 0);
+          flex-grow:var(--linear-layout-stretch-items, 0);
+  -ms-flex-negative:var(--linear-layout-shrink-items, 0);
+      flex-shrink:var(--linear-layout-shrink-items, 0);
+  -ms-flex-preferred-size:var(--linear-layout-stretch-basis);
+      flex-basis:var(--linear-layout-stretch-basis);
+  justify-self:var(--linear-layout-halign-item, flex-start);
+  -ms-flex-item-align:var(--linear-layout-valign-item);
+      align-self:var(--linear-layout-valign-item);
   -webkit-box-sizing:border-box;
           box-sizing:border-box;
 }
@@ -47,20 +47,20 @@
 
 
 .rl-b6ac2d51 > *{
-  width:var(--linear-layout-self-size, var(--linear-layout-items-size));
-  min-width:var(--linear-layout-self-min-size, var(--linear-layout-items-min-size));
-  max-width:var(--linear-layout-self-max-size, var(--linear-layout-items-max-size))
+  width:var(--linear-layout-item-size);
+  min-width:var(--linear-layout-item-min-size);
+  max-width:var(--linear-layout-item-max-size)
 }
 
 
 .rl-b6ac2d51 > *:not(:first-child){
-  margin-left:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
+  margin-left:calc(var(--linear-layout-item-gap) / 2);
 }
 
 
 .rl-b6ac2d51 > *:not(:last-child){
-  margin-right:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
-  border-right:var(--linear-layout-self-separator, var(--linear-layout-items-separator));
+  margin-right:calc(var(--linear-layout-item-gap) / 2);
+  border-right:var(--linear-layout-item-separator);
 }
 
 
@@ -73,53 +73,40 @@
 
 
 .rl-f1eedeb0 > *{
-  height:var(--linear-layout-self-size, var(--linear-layout-items-size));
-  min-height:var(--linear-layout-self-min-size, var(--linear-layout-items-min-size));
-  max-height:var(--linear-layout-self-max-size, var(--linear-layout-items-max-size))
+  height:var(--linear-layout-item-size);
+  min-height:var(--linear-layout-item-min-size);
+  max-height:var(--linear-layout-item-max-size)
 }
 
 
 .rl-f1eedeb0 > *:not(:first-child){
-  margin-top:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
+  margin-top:calc(var(--linear-layout-item-gap) / 2);
 }
 
 
 .rl-f1eedeb0 > *:not(:last-child){
-  margin-bottom:calc(var(--linear-layout-self-margin, var(--linear-layout-items-gap)) / 2);
-  border-bottom:var(--linear-layout-self-separator, var(--linear-layout-items-separator));
+  margin-bottom:calc(var(--linear-layout-item-gap) / 2);
+  border-bottom:var(--linear-layout-item-separator);
 }
 
 
 
-.rl-d8af8a4c{
-  --linear-layout-stretch-items:unset;
-  --linear-layout-shrink-items:unset;
-  --linear-layout-stretch-items-basis:unset;
-
-  --linear-layout-items-gap:unset;
-  --linear-layout-items-separator:unset;
-
-  --linear-layout-halign-items:unset;
-  --linear-layout-valign-items:unset;
-
-  --linear-layout-items-size:unset;
-  --linear-layout-items-min-size:unset;
-  --linear-layout-items-max-size:unset;
+.rl-d8af8a4c > *{
+}
 
 
-  --linear-layout-stretch-self:unset;
-  --linear-layout-shrink-self:unset;
-  --linear-layout-stretch-self-basis:unset;
 
-  --linear-layout-self-margin:unset;
-  --linear-layout-self-separator:unset;
-
-  --linear-layout-halign-self:unset;
-  --linear-layout-valign-self:unset;
-
-  --linear-layout-self-size:unset;
-  --linear-layout-self-min-size:unset;
-  --linear-layout-self-max-size:unset;
+.rl-d8af8a4c > * > *{
+  --linear-layout-stretch-items:initial;
+  --linear-layout-shrink-items:initial;
+  --linear-layout-stretch-basis:initial;
+  --linear-layout-item-gap:initial;
+  --linear-layout-item-separator:initial;
+  --linear-layout-halign-item:initial;
+  --linear-layout-valign-item:initial;
+  --linear-layout-item-size:initial;
+  --linear-layout-item-min-size:initial;
+  --linear-layout-item-max-size:initial;
 }
 
 /*# sourceMappingURL=LinearLayout.css.map */
