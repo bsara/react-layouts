@@ -60,7 +60,6 @@
 
 .rl-b6ac2d51 > *:not(:last-child){
   margin-right:calc(var(--linear-layout-item-gap) / 2);
-  border-right:var(--linear-layout-item-separator);
 }
 
 
@@ -86,7 +85,6 @@
 
 .rl-f1eedeb0 > *:not(:last-child){
   margin-bottom:calc(var(--linear-layout-item-gap) / 2);
-  border-bottom:var(--linear-layout-item-separator);
 }
 
 
@@ -101,7 +99,6 @@
   --linear-layout-shrink-items:initial;
   --linear-layout-stretch-basis:initial;
   --linear-layout-item-gap:initial;
-  --linear-layout-item-separator:invalid;
   --linear-layout-halign-item:initial;
   --linear-layout-valign-item:initial;
   --linear-layout-item-size:initial;
