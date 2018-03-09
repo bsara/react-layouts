@@ -82,7 +82,7 @@
     --linear-layout-stretch-basis: initial;
 
     --linear-layout-item-gap:       initial;
-    --linear-layout-item-separator: initial;
+    --linear-layout-item-separator: invalid; /* NOTE: Intentionally put an invalid value here to allow for items to have borders when no separator is specified */
 
     --linear-layout-halign-item: initial;
     --linear-layout-valign-item: initial;

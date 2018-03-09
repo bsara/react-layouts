@@ -101,7 +101,7 @@
   --linear-layout-shrink-items:initial;
   --linear-layout-stretch-basis:initial;
   --linear-layout-item-gap:initial;
-  --linear-layout-item-separator:initial;
+  --linear-layout-item-separator:invalid;
   --linear-layout-halign-item:initial;
   --linear-layout-valign-item:initial;
   --linear-layout-item-size:initial;
