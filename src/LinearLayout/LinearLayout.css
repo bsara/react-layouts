@@ -44,7 +44,7 @@
 
     &:not(:last-child) {
       margin-right: calc(var(--linear-layout-item-gap) / 2);
-      border-right: var(--linear-layout-item-separator);
+      /* border-right: var(--linear-layout-item-separator); */
     }
   }
 }
@@ -64,7 +64,7 @@
 
     &:not(:last-child) {
       margin-bottom: calc(var(--linear-layout-item-gap) / 2);
-      border-bottom: var(--linear-layout-item-separator);
+      /* border-bottom: var(--linear-layout-item-separator); */
     }
   }
 }
@@ -82,7 +82,7 @@
     --linear-layout-stretch-basis: initial;
 
     --linear-layout-item-gap:       initial;
-    --linear-layout-item-separator: invalid; /* NOTE: Intentionally put an invalid value here to allow for items to have borders when no separator is specified */
+    /* --linear-layout-item-separator: invalid; /* NOTE: Intentionally put an invalid value here to allow for items to have borders when no separator is specified */
 
     --linear-layout-halign-item: initial;
     --linear-layout-valign-item: initial;
