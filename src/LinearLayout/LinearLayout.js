@@ -20,48 +20,28 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
 
+import { pickGlobalHtmlAttirbuteProps } from '../utils';
+
 import './LinearLayout.css';
 
 
 
-// eslint-disable-next-line react/require-optimization
-export default class LinearLayout extends React.Component {
-  render() {
-    const {
-      children,
-      className,
-      domRef,
-      direction
-    } = this.props;
+export default function LinearLayout(props) {
+  const isDirectionVertical = (props.direction === 'v' || props.direction === 'vert' || props.direction === 'vertical');
 
-    const elementProps = Object.assign({}, this.props);
-    delete elementProps.domRef;
-    delete elementProps.direction;
-
-    const isDirectionVertical = (direction === 'v' || direction === 'vert' || direction === 'vertical');
-
-    return (
-      <div {...elementProps} styleName={`linear-layout ${isDirectionVertical ? 'linear-layout-vertical' : 'linear-layout-horizontal'}`} className={className} ref={domRef}>
-        {children}
-      </div>
-    );
-  }
+  return (
+    <div {...pickGlobalHtmlAttirbuteProps(props)} styleName={`linear-layout ${isDirectionVertical ? 'linear-layout-vertical' : 'linear-layout-horizontal'}`} className={props.className} ref={props.domRef}>
+      {props.children}
+    </div>
+  );
 }
 
 
 LinearLayout.propTypes = {
-  id: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]),
-
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string)
-  ]),
-
-  style: PropTypes.object,
-
+  id:        PropTypes.oneOfType([ PropTypes.number, PropTypes.string ]),
+  className: PropTypes.string,
+  style:     PropTypes.object,
   domRef:    PropTypes.func,
+
   direction: PropTypes.oneOf([ 'h', 'horiz', 'horizontal', 'v', 'vert', 'vertical' ])
 };

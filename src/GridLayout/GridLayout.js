@@ -20,37 +20,24 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
 
+import { pickGlobalHtmlAttirbuteProps } from '../utils';
+
 import './GridLayout.css';
 
 
 
-// eslint-disable-next-line react/require-optimization
-export default class GridLayout extends React.Component {
-  render() {
-    const elementProps = Object.assign({}, this.props);
-    delete elementProps.domRef;
-
-    return (
-      <div {...elementProps} styleName="grid-layout" className={elementProps.className} ref={this.props.domRef}>
-        {this.props.children}
-      </div>
-    );
-  }
+export default function GridLayout(props) {
+  return (
+    <div {...pickGlobalHtmlAttirbuteProps(props)} styleName="grid-layout" className={props.className} ref={props.domRef}>
+      {props.children}
+    </div>
+  );
 }
 
 
 GridLayout.propTypes = {
-  id: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]),
-
-  className: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.string)
-  ]),
-
-  style: PropTypes.object,
-
-  domRef: PropTypes.func
+  id:        PropTypes.oneOfType([ PropTypes.number, PropTypes.string ]),
+  className: PropTypes.string,
+  style:     PropTypes.object,
+  domRef:    PropTypes.func
 };
