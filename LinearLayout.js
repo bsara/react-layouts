@@ -23,8 +23,4 @@ Object.defineProperty(exports, "__esModule", {
 
 var LinearLayout = require('./dist/LinearLayout');
 
-exports.default = (
-  (LinearLayout && LinearLayout.__esModule)
-    ? LinearLayout
-    : { default: LinearLayout }
-);
+exports.default = LinearLayout;
