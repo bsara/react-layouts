@@ -21,6 +21,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var GridLayout = require('./dist/GridLayout');
+var GridLayout = require('./dist/GridLayout').default;
 
 exports.default = GridLayout;
